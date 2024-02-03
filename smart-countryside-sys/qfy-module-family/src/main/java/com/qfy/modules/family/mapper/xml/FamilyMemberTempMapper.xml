@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.family.mapper.FamilyMemberTempMapper">
+
+    <update id="batchUpdateByUsername" parameterType="java.lang.String">
+        UPDATE qfy_family_member a,qfy_family_member_temp b
+            SET a.name = b.name,
+                a.family_rel = b.family_rel,
+                a.telephone = b.telephone,
+                a.s1 = b.s1,
+                a.s2 = b.s2,
+                a.s3 = b.s3,
+                a.s4 = b.s4,
+                a.s5 = b.s5,
+                a.s6 = b.s6,
+                a.s7 = b.s7,
+                a.s8 = b.s8,
+                a.s9 = b.s9,
+                a.s10 = b.s10,
+                a.town_yiliao = b.town_yiliao,
+                a.town_yanglao = b.town_yanglao,
+                a.town_min_baozheng = b.town_min_baozheng,
+                a.city_yiliao = b.city_yiliao,
+                a.city_yanglao = b.city_yanglao,
+                a.working_address = b.working_address,
+                a.in_school = b.in_school,
+                a.dabing_yiliao = b.dabing_yiliao,
+                a.disability = b.disability,
+                a.enlist = b.enlist,
+                a.health = b.health,
+                a.labor_skills = b.labor_skills,
+                a.logout_date = b.logout_date,
+                a.marriage = b.marriage,
+                a.min_baozheng_date = b.min_baozheng_date,
+                a.min_baozheng_level = b.min_baozheng_level,
+                a.move_out = b.move_out,
+                a.nation = b.nation,
+                a.register_date = b.register_date,
+                a.support_date = b.support_date,
+                a.support_member = b.support_member,
+                a.wenhua_cc = b.wenhua_cc,
+                a.working_date = a.working_date,
+                a.working_depart = b.working_depart,
+                a.zhengzhi_mm = b.zhengzhi_mm,
+                a.update_time = now(),
+                a.update_by = #{username}
+        WHERE a.family_number = b.family_number
+          AND a.year = b.year
+          AND a.id_card = b.id_card
+            AND b.create_by = #{username}
+    </update>
+
+</mapper>

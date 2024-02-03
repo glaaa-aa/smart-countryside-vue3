@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.api.mapper.PointsMapper">
+    <select id="selectPointsRankings" resultType="com.qfy.modules.api.domain.PointsRanking">
+        SELECT b.id_card AS uid,
+               a.family_manager AS username,
+               b.name AS realname,
+               b.telephone AS phone,
+               b.family_number AS code,
+               a.total AS total_amount,
+               b.address
+        FROM qfy_family_integral a,
+             qfy_family_base b ${ew.customSqlSegment}
+    </select>
+
+    <select id="pointsRankings" resultType="com.qfy.modules.api.domain.PointsRanking">
+        SELECT a.*, SUM(a.score_plus) AS plusAmount, SUM(a.score_reduce) AS reduceAmount
+            FROM (
+            SELECT b.id_card        AS uid,
+                a.family_manager AS username,
+                b.name           AS realname,
+                b.telephone      AS phone,
+                b.family_number  AS code,
+                a.total          AS total_amount,
+                b.address,
+                c.score_plus,
+                c.score_reduce
+                FROM qfy_family_integral a,
+                qfy_family_base b,
+                qfy_family_integral_record c
+                WHERE a.family_number = b.family_number
+                AND a.family_number = c.family_number
+            <if test="orgCode != null and orgCode != ''">
+                AND a.village LIKE concat(#{orgCode}, '%')
+            </if>
+            <if test="year != null and year != ''">
+                AND a.data_year = #{year}
+            </if>
+            <if test="familyNo != null and familyNo != ''">
+                AND a.family_number = #{familyNo}
+            </if>
+            ) a
+        GROUP BY a.code ORDER BY a.total_amount DESC
+    </select>
+
+    <select id="selectHistoryPages" resultType="com.qfy.modules.api.domain.PointsHistory">
+        SELECT a.id,
+            a.family_number AS family_no,
+            CASE WHEN a.score_plus > 0 THEN a.score_plus ELSE a.score_reduce END AS score,
+            a.create_time AS submit_date,
+            a.ext3          AS category,
+            a.ext2          AS work_imgs,
+            a.ext1          AS item_reduce,
+            a.score_plus    AS score_plus,
+            a.score_reduce  AS score_reduce,
+            a.data_year     AS year,
+            b.org_code,
+            b.telephone,
+            b.name          AS real_name,
+            c.id            AS chk_id,
+            c.name          AS item_name,
+           CASE WHEN a.ext3 = '1' THEN '加分' ELSE '减分' END AS category_name,
+           CASE WHEN a.item_plus IS NOT NULL THEN a.item_plus  ELSE a.item_reduce END AS reason
+        FROM qfy_family_integral_record a,qfy_family_base b,qfy_check_item c ${ew.customSqlSegment}
+    </select>
+</mapper>

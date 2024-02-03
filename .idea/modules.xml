@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-boot-base-core/jeecg-boot-base-core.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-boot-base-core/jeecg-boot-base-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-boot-parent.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-boot-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-module-demo/jeecg-module-demo.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-demo/jeecg-module-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-module-system.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-module-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-api/jeecg-system-api.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-api/jeecg-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-biz/jeecg-system-biz.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-biz/jeecg-system-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-api/jeecg-system-local-api/jeecg-system-local-api.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-api/jeecg-system-local-api/jeecg-system-local-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-start/jeecg-system-start.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-start/jeecg-system-start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/qfy-module-city3d/qfy-module-city3d.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/qfy-module-city3d/qfy-module-city3d.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/qfy-module-cms/qfy-module-cms.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/qfy-module-cms/qfy-module-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/qfy-module-commons/qfy-module-commons.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/qfy-module-commons/qfy-module-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/qfy-module-dissension/qfy-module-dissension.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/qfy-module-dissension/qfy-module-dissension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/qfy-module-family/qfy-module-family.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/qfy-module-family/qfy-module-family.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/qfy-module-smartform/qfy-module-smartform.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/qfy-module-smartform/qfy-module-smartform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-countryside-sys/qfy-module-third/qfy-module-third.iml" filepath="$PROJECT_DIR$/smart-countryside-sys/qfy-module-third/qfy-module-third.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/qfy-smart-countryside-v3.iml" filepath="$PROJECT_DIR$/.idea/qfy-smart-countryside-v3.iml" />
+    </modules>
+  </component>
+</project>

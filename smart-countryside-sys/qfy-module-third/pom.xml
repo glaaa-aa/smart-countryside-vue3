@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jeecg-boot-parent</artifactId>
+        <groupId>org.jeecgframework.boot</groupId>
+        <version>3.6.1</version>
+    </parent>
+
+    <!--定义模块 名称和版本 -->
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>qfy-module-third</artifactId>
+    <version>2.0.0</version>
+
+    <!--引入的模块-->
+    <dependencies>
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>jeecg-boot-base-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>jeecg-system-biz</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>qfy-module-commons</artifactId>
+            <version>2.0.2209</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--钉钉新版sdk-->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>dingtalk</artifactId>
+            <version>2.0.14</version>
+        </dependency>
+        <!--钉钉旧版sdk-->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>alibaba-dingtalk-service-sdk</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!--        &lt;!&ndash;钉钉老版sdk&ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.aliyun</groupId>-->
+        <!--            <artifactId>alibaba-dingtalk-service-sdk</artifactId>-->
+        <!--            <version>2.0.0</version>-->
+        <!--        </dependency>-->
+
+        <!--微信公众号-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.binarywang</groupId>-->
+<!--            <artifactId>wx-java-mp-spring-boot-starter</artifactId>-->
+<!--            <version>4.4.0</version>-->
+<!--        </dependency>-->
+
+        <!--小程序-->
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>wx-java-miniapp-spring-boot-starter</artifactId>
+            <version>4.5.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

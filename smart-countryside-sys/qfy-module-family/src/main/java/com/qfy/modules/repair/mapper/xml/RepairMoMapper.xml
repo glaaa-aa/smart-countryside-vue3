@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.repair.mapper.RepairMoMapper">
+
+    <select id="queryRepairMoList" parameterType="com.qfy.modules.repair.entity.RepairMo"  resultType="com.qfy.modules.repair.entity.RepairMo">
+        select * from qfy_andon_repair_mo where 1=1
+        <if test="repairMo.wcCode != null and repairMo.wcCode != ''">
+            <foreach collection="repairMo.wcCodeList" item="item" index="index" open="AND(" close=")" separator="OR">
+                wc_code Like concat(#{item},'%')
+            </foreach>
+        </if>
+
+        <if test="repairMo.weixTimes==0">
+            And (duty_man_id = '' OR duty_man_id is null)
+        </if>
+        <if test="repairMo.srcDocType != null and repairMo.srcDocType != ''">
+            AND src_doc_type = #{repairMo.srcDocType}
+        </if>
+        <if test="repairMo.moCode != null and repairMo.moCode != ''">
+            AND mo_code Like concat('%',#{repairMo.moCode},'%')
+        </if>
+
+        <if test="repairMo.moState != null">
+            <if test="repairMo.stopTimes==1">
+               AND mo_state &gt;= #{repairMo.moState}
+            </if>
+            <if test="repairMo.stopTimes==0">
+                AND mo_state = #{repairMo.moState}
+            </if>
+        </if>
+        <if test="repairMo.sbbeginTime != null and repairMo.sbbeginTime != ''">
+            AND LEFT(rec_date,10) &gt;= #{repairMo.sbbeginTime}
+        </if>
+
+        <if test="repairMo.sbendTime != null and repairMo.sbendTime != ''">
+            AND LEFT(rec_date,10) &lt;= #{repairMo.sbendTime}
+        </if>
+        <if test="repairMo.wcbeginTime != null and repairMo.wcbeginTime != ''">
+            AND LEFT(weix_eddate,10) &gt;= #{repairMo.wcbeginTime}
+        </if>
+        <if test="repairMo.wcendTime != null and repairMo.wcendTime != ''">
+            AND LEFT(weix_eddate,10) &lt;= #{repairMo.wcendTime}
+        </if>
+
+        <if test="repairMo.queryParam != null and repairMo.queryParam != ''">
+            AND (dev_name LIKE  concat('%',#{repairMo.queryParam},'%')
+            or duty_man_id LIKE  concat('%',#{repairMo.queryParam},'%')
+            or happen_pos LIKE  concat('%',#{repairMo.queryParam},'%')
+            or wc_name LIKE  concat('%',#{repairMo.queryParam},'%')
+            or remarks LIKE  concat('%',#{repairMo.queryParam},'%')
+            )
+        </if>
+        <if test="repairMo.faultCode != null and repairMo.faultCode != ''">
+            AND INSTR(fault_code,#{repairMo.faultCode})
+        </if>
+        <if test="repairMo.notifier != null and repairMo.notifier != ''">
+            AND notifier = #{repairMo.notifier}
+        </if>
+        <if test="repairMo.dutyManId != null and repairMo.dutyManId != ''">
+            AND duty_man_id = #{repairMo.dutyManId}
+        </if>
+        <if test="repairMo.shenpManId != null and repairMo.shenpManId != ''">
+            AND shenp_man_id = #{repairMo.shenpManId}
+        </if>
+        <if test="repairMo.catalog != null and repairMo.catalog != ''">
+            AND catalog = #{repairMo.catalog}
+        </if>
+        and del_flag = '0' order by mo_state ASC,rec_date DESC
+    </select>
+
+    <select id="queryCountList" parameterType="com.qfy.modules.repair.entity.RepairMo"  resultType="java.lang.Integer">
+        select count(1) from qfy_andon_repair_mo where 1=1
+        <if test="repairMo.wcCode != null and repairMo.wcCode != ''">
+            <foreach collection="repairMo.wcCodeList" item="item" index="index" open="AND(" close=")" separator="OR">
+                wc_code Like concat(#{item},'%')
+            </foreach>
+        </if>
+        <if test="repairMo.weixTimes==0">
+           And (duty_man_id = '' OR duty_man_id is null)
+        </if>
+        <if test="repairMo.dutyManId != null and repairMo.dutyManId != ''">
+            AND duty_man_id = #{repairMo.dutyManId}
+        </if>
+        <if test="repairMo.moState != null and repairMo.stopTimes==0">
+            AND mo_state = #{repairMo.moState}
+        </if>
+        <if test="repairMo.moState != null  and repairMo.stopTimes==1">
+            AND mo_state &gt;= #{repairMo.moState}
+        </if>
+        <if test="repairMo.catalog != null  and repairMo.catalog != ''">
+            AND catalog = #{repairMo.catalog}
+        </if>
+        <if test="repairMo.shenpManId != null and repairMo.shenpManId != ''">
+            AND shenp_man_id = #{repairMo.shenpManId}
+        </if>
+        and del_flag = '0'
+    </select>
+
+    <select id="queryMoCount" parameterType="com.qfy.modules.repair.entity.RepairMo"  resultType="java.lang.Integer">
+        SELECT COUNT(1) count FROM(SELECT *,
+        (CASE WHEN ( mo_state &gt;= 30 ) THEN to_days( weix_eddate ) - to_days( resolution_time ) WHEN ( mo_state &lt; 30 ) THEN to_days(now()) - to_days( resolution_time ) ELSE NULL END ) AS `yqts`
+        FROM qfy_andon_repair_mo where del_flag = '0' ) a where 1=1
+        <if test="repairMo.wcCode != null and repairMo.wcCode != ''">
+            <foreach collection="repairMo.wcCodeList" item="item" index="index" open="AND(" close=")" separator="OR">
+               a.wc_code Like concat(#{item},'%')
+            </foreach>
+        </if>
+        <if test="repairMo.moState != null and repairMo.stopTimes==0">
+            AND a.mo_state = #{repairMo.moState}
+        </if>
+        <if test="repairMo.moState != null  and repairMo.stopTimes==1">
+            AND a.mo_state &gt;= #{repairMo.moState}
+        </if>
+        <if test="repairMo.moState != null and repairMo.stopTimes==2">
+            AND a.mo_state &lt;= #{repairMo.moState}
+        </if>
+        <if test="repairMo.weixStdate != null and repairMo.weixStdate != ''">
+            and substring(a.create_time,1,7) &gt;=#{repairMo.weixStdate}
+        </if>
+        <if test="repairMo.weixEddate != null and repairMo.weixEddate != ''">
+            and substring(a.create_time,1,7) &lt;= #{repairMo.weixEddate}
+        </if>
+        <if test="repairMo.weixTimes==0">
+            And yqts>0
+        </if>
+    </select>
+</mapper>

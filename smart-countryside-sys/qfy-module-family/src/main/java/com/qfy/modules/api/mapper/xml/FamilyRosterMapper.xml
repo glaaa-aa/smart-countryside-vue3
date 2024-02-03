@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.api.mapper.FamilyRosterMapper">
+    <select id="selectFamilyRoster" resultType="com.qfy.modules.api.domain.FamilyRoster">
+            SELECT b.id AS uid,
+                   b.name AS realname,
+                   CASE b.sex when 1 then '男' when 2 then '女' else '男' end AS sex,
+                   b.id_card AS username,
+                   b.telephone as phone,
+                   a.org_code AS orgCode,
+                   b.family_number AS familyNo,
+                   a.address AS address
+            FROM qfy_family_base a, qfy_family_member b ${ew.customSqlSegment}
+    </select>
+
+    <select id="selectFamilyMembers" resultType="com.qfy.modules.api.domain.FamilyRoster">
+        SELECT a.id AS uid,
+               a.name AS realname,
+               CASE b.sex when 1 then '男' when 2 then '女' else '男' end AS sex,
+               a.id_card AS username,
+               a.telephone as phone,
+               b.org_code AS orgCode,
+               b.family_number AS familyNo,
+               b.address AS address
+        FROM qfy_family_member a, qfy_family_base b ${ew.customSqlSegment}
+    </select>
+</mapper>

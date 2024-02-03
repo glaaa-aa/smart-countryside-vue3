@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.dissension.mapper.DissensionMapper">
+
+    <select id="getMaxDissensionCode" resultType="java.lang.Integer">
+        select max(cast(substring(code,10) AS SIGNED)) max_no from qfy_dissension where code like CONCAT('%',#{prefix},'%')
+    </select>
+
+    <select id="queryDissensionCount" resultType="java.util.HashMap">
+        SELECT
+            COUNT(*) AS count,
+            SUM(CASE WHEN state = 1 THEN 1 ELSE 0 END) AS submitted,
+            SUM(CASE WHEN state = 2 THEN 1 ELSE 0 END) AS underway,
+            SUM(CASE WHEN state = 3 THEN 1 ELSE 0 END) AS completed
+        FROM qfy_dissension
+        <where>
+            <if test="state!=null and state!=''">
+                state=#{state}
+            </if>
+        </where>
+    </select>
+
+</mapper>

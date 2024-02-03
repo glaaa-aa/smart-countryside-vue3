@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.files.mapper.FilesManagerMapper">
+
+    <resultMap id="fileManageList" type="com.qfy.modules.files.entity.FilesManager" >
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="sys_org_code" property="sysOrgCode" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="size" property="size" jdbcType="VARCHAR"/>
+        <result column="format" property="format" jdbcType="VARCHAR"/>
+        <result column="thumbnail" property="thumbnail" jdbcType="VARCHAR"/>
+        <result column="fpath" property="fpath" jdbcType="VARCHAR"/>
+        <result column="furl" property="furl" jdbcType="VARCHAR"/>
+        <result column="folder_id" property="folderId" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="queryListByRefCode" parameterType="com.qfy.modules.files.entity.FileFolder"  resultMap="fileManageList">
+        select a.* from oss_files_manager a left join oss_file_folder b on a.folder_id = b.id
+        where b.ref_code = #{fileFolder.refCode} and b.ref_type = #{fileFolder.refType}
+        order by b.id asc
+    </select>
+
+
+    <select id="queryListBy" parameterType="com.qfy.modules.files.model.FileManagerVo"  resultMap="fileManageList2">
+        select  * from
+            (select  id,0 as iz_folder,icon,old_name file_name,name,size,format, thumbnail,fpath,furl, folder_id pid, '' ref_code, '' ref_type, null iz_xuni_path,
+                 remarks,create_by,create_time,create_name,update_by,update_time,update_name,sys_org_code  from oss_files_manager
+                union all
+            select id, 1 as iz_folder,'folder',folder_name file_name ,folder_name name ,0,'folder',null,folder_url fpath ,folder_url furl,pid,
+                    ref_code,ref_type,iz_xuni_path, remarks,create_by,create_time,create_name,update_by,update_time,update_name,sys_org_code
+            from oss_file_folder ) temp
+        where pid = #{fileManagerVo.pid} and (ref_type is null or  ref_type != "project" )
+        order by  iz_folder desc, create_time desc
+    </select>
+
+    <resultMap id="fileManageList2" type="com.qfy.modules.files.model.FileManagerVo" >
+        <result column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="iz_folder" property="izFolder" jdbcType="BOOLEAN"/>
+        <result column="iz_xuni_path" property="izXuniPath" jdbcType="BOOLEAN"/>
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_name" property="createName" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR"/>
+        <result column="update_name" property="updateName" jdbcType="VARCHAR"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="sys_org_code" property="sysOrgCode" jdbcType="VARCHAR"/>
+        <result column="remarks" property="remarks" jdbcType="VARCHAR"/>
+
+        <result column="file_name" property="fileName" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="icon" property="icon" jdbcType="VARCHAR"/>
+        <result column="size" property="size" jdbcType="VARCHAR"/>
+        <result column="format" property="format" jdbcType="VARCHAR"/>
+        <result column="thumbnail" property="thumbnail" jdbcType="VARCHAR"/>
+        <result column="fpath" property="fpath" jdbcType="VARCHAR"/>
+        <result column="furl" property="furl" jdbcType="VARCHAR"/>
+        <result column="ref_code" property="refCode" jdbcType="VARCHAR"/>
+        <result column="ref_type" property="refType" jdbcType="VARCHAR"/>
+        <result column="pid" property="pid" jdbcType="VARCHAR"/>
+    </resultMap>
+
+</mapper>

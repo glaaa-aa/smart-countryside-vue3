@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.config.mapper.ThirdConfigMapper">
+    <!--根据租户id获取钉钉/企业微信配置-->
+    <select id="getThirdConfigListByThirdType" resultType="com.qfy.modules.config.entity.ThirdConfig">
+        select * from qfy_system_third_config
+        where tenant_id = #{tenantId}
+          and status = 1
+    </select>
+
+    <!--根据租户id和第三方类别获取第三方配置-->
+    <select id="getThirdConfigByThirdType" resultType="com.qfy.modules.config.entity.ThirdConfig">
+        select * from qfy_system_third_config
+        where tenant_id = #{tenantId}
+          and third_type = #{thirdType}
+          and status = 1
+    </select>
+
+</mapper>

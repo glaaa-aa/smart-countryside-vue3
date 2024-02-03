@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: qfy-boot-system
+  profiles:
+    active: dev

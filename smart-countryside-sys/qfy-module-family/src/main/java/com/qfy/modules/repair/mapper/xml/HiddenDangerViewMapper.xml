@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.repair.mapper.HiddenDangerViewMapper">
+    <select id="selectList" parameterType="com.qfy.modules.repair.entity.RepairMo" resultType="com.qfy.modules.repair.entity.HiddenDangerView">
+            SELECT * FROM (
+            (SELECT `id`         AS `id`,
+                `call_type`      AS `call_type`,
+                `call_code`      AS `call_code`,
+                `call_state`     AS `call_state`,
+                `deviceno`       AS `deviceno`,
+                `dev_name`       AS `dev_name`,
+                `location`       AS `location`,
+                `rec_date`       AS `rec_date`,
+                `wc_code`        AS `wc_code`,
+                `wc_name`        AS `wc_name`,
+                `notifier`       AS `notifier`,
+                `notifier_name`  AS `notifier_name`,
+                `notifier_phone` AS `notifier_phone`,
+                `notice_depart`  AS `notice_depart`,
+                `fault_code`     AS `fault_code`,
+                `duty_man`       AS `duty_man`,
+                `duty_man_id`    AS `duty_man_id`,
+                `sys_org_code`   AS `sys_org_code`,
+                `del_flag`       AS `del_flag`,
+                `happen_pos`     AS `happen_pos`,
+                `sign_man`       AS `sign_man`,
+                `sign_man_id`    AS `sign_man_id`,
+                `sign_time`      AS `sign_time`,
+                `abnormal_name`  AS `abnormal_name`,
+                `abnormal_code`  AS `abnormal_code`,
+                `abn_content`    AS `abn_content`
+         FROM `qfy_andon_call_car` WHERE `del_flag` = '0')
+        UNION ALL
+        (SELECT `id`             AS `id`,
+                `call_type`      AS `call_type`,
+                `call_code`      AS `call_code`,
+                `call_state`     AS `call_state`,
+                `deviceno`       AS `deviceno`,
+                `dev_name`       AS `dev_name`,
+                `location`       AS `location`,
+                `rec_date`       AS `rec_date`,
+                `wc_code`        AS `wc_code`,
+                `wc_name`        AS `wc_name`,
+                `notifier`       AS `notifier`,
+                `notifier_name`  AS `notifier_name`,
+                `notifier_phone` AS `notifier_phone`,
+                `notice_depart`  AS `notice_depart`,
+                `fault_code`     AS `fault_code`,
+                `duty_man`       AS `duty_man`,
+                `duty_man_id`    AS `duty_man_id`,
+                `sys_org_code`   AS `sys_org_code`,
+                `del_flag`       AS `del_flag`,
+                `happen_pos`     AS `happen_pos`,
+                `sign_man`       AS `sign_man`,
+                `sign_man_id`    AS `sign_man_id`,
+                `sign_time`      AS `sign_time`,
+                `abnormal_name`  AS `abnormal_name`,
+                `abnormal_code`  AS `abnormal_code`,
+                `abn_content`    AS `abn_content`
+         FROM `qfy_andon_call_driver` WHERE `del_flag` = '0')
+        UNION ALL
+        (SELECT `id`             AS `id`,
+                `call_type`      AS `call_type`,
+                `call_code`      AS `call_code`,
+                `call_state`     AS `call_state`,
+                `deviceno`       AS `deviceno`,
+                `dev_name`       AS `dev_name`,
+                `location`       AS `location`,
+                `rec_date`       AS `rec_date`,
+                `wc_code`        AS `wc_code`,
+                `wc_name`        AS `wc_name`,
+                `notifier`       AS `notifier`,
+                `notifier_name`  AS `notifier_name`,
+                `notifier_phone` AS `notifier_phone`,
+                `notice_depart`  AS `notice_depart`,
+                `fault_code`     AS `fault_code`,
+                `duty_man`       AS `duty_man`,
+                `duty_man_id`    AS `duty_man_id`,
+                `sys_org_code`   AS `sys_org_code`,
+                `del_flag`       AS `del_flag`,
+                `happen_pos`     AS `happen_pos`,
+                `sign_man`       AS `sign_man`,
+                `sign_man_id`    AS `sign_man_id`,
+                `sign_time`      AS `sign_time`,
+                `abnormal_name`  AS `abnormal_name`,
+                `abnormal_code`  AS `abnormal_code`,
+                `abn_content`    AS `abn_content`
+         FROM `qfy_andon_call_company` WHERE `del_flag` = '0')
+        UNION ALL
+        (SELECT `id`             AS `id`,
+                `call_type`      AS `call_type`,
+                `call_code`      AS `call_code`,
+                `call_state`     AS `call_state`,
+                `deviceno`       AS `deviceno`,
+                `dev_name`       AS `dev_name`,
+                `location`       AS `location`,
+                `rec_date`       AS `rec_date`,
+                `wc_code`        AS `wc_code`,
+                `wc_name`        AS `wc_name`,
+                `notifier`       AS `notifier`,
+                `notifier_name`  AS `notifier_name`,
+                `notifier_phone` AS `notifier_phone`,
+                `notice_depart`  AS `notice_depart`,
+                `fault_code`     AS `fault_code`,
+                `duty_man`       AS `duty_man`,
+                `duty_man_id`    AS `duty_man_id`,
+                `sys_org_code`   AS `sys_org_code`,
+                `del_flag`       AS `del_flag`,
+                `happen_pos`     AS `happen_pos`,
+                `sign_man`       AS `sign_man`,
+                `sign_man_id`    AS `sign_man_id`,
+                `sign_time`      AS `sign_time`,
+                `abnormal_name`  AS `abnormal_name`,
+                `abnormal_code`  AS `abnormal_code`,
+                `abn_content`    AS `abn_content`
+         FROM `qfy_andon_call_road` WHERE `del_flag` = '0')
+        ) t WHERE 1=1
+        <if test="repairMo.id != null and repairMo.id != ''">
+            AND t.id = #{repairMo.id}
+        </if>
+        <if test="repairMo.wcCode != null and repairMo.wcCode != ''">
+            AND t.wc_code Like concat(#{repairMo.wcCode},'%')
+        </if>
+        <if test="repairMo.queryParam != null and repairMo.queryParam != ''">
+            AND (dev_name LIKE  concat('%',#{repairMo.queryParam},'%')
+            OR duty_man_id LIKE  concat('%',#{repairMo.queryParam},'%')
+            OR happen_pos LIKE  concat('%',#{repairMo.queryParam},'%')
+            OR wc_name LIKE  concat('%',#{repairMo.queryParam},'%')
+            )
+        </if>
+    </select>
+    <select id="selectById" resultType="com.qfy.modules.repair.entity.HiddenDangerView">
+        SELECT * FROM (
+        (SELECT `id`         AS `id`,
+        `call_type`      AS `call_type`,
+        `call_code`      AS `call_code`,
+        `call_state`     AS `call_state`,
+        `deviceno`       AS `deviceno`,
+        `dev_name`       AS `dev_name`,
+        `location`       AS `location`,
+        `rec_date`       AS `rec_date`,
+        `wc_code`        AS `wc_code`,
+        `wc_name`        AS `wc_name`,
+        `notifier`       AS `notifier`,
+        `notifier_name`  AS `notifier_name`,
+        `notifier_phone` AS `notifier_phone`,
+        `notice_depart`  AS `notice_depart`,
+        `fault_code`     AS `fault_code`,
+        `duty_man`       AS `duty_man`,
+        `duty_man_id`    AS `duty_man_id`,
+        `sys_org_code`   AS `sys_org_code`,
+        `del_flag`       AS `del_flag`,
+        `happen_pos`     AS `happen_pos`,
+        `sign_man`       AS `sign_man`,
+        `sign_man_id`    AS `sign_man_id`,
+        `sign_time`      AS `sign_time`,
+        `abnormal_name`  AS `abnormal_name`,
+        `abnormal_code`  AS `abnormal_code`,
+        `abn_content`    AS `abn_content`
+        FROM `qfy_andon_call_car` WHERE `del_flag` = '0')
+        UNION ALL
+        (SELECT `id`             AS `id`,
+        `call_type`      AS `call_type`,
+        `call_code`      AS `call_code`,
+        `call_state`     AS `call_state`,
+        `deviceno`       AS `deviceno`,
+        `dev_name`       AS `dev_name`,
+        `location`       AS `location`,
+        `rec_date`       AS `rec_date`,
+        `wc_code`        AS `wc_code`,
+        `wc_name`        AS `wc_name`,
+        `notifier`       AS `notifier`,
+        `notifier_name`  AS `notifier_name`,
+        `notifier_phone` AS `notifier_phone`,
+        `notice_depart`  AS `notice_depart`,
+        `fault_code`     AS `fault_code`,
+        `duty_man`       AS `duty_man`,
+        `duty_man_id`    AS `duty_man_id`,
+        `sys_org_code`   AS `sys_org_code`,
+        `del_flag`       AS `del_flag`,
+        `happen_pos`     AS `happen_pos`,
+        `sign_man`       AS `sign_man`,
+        `sign_man_id`    AS `sign_man_id`,
+        `sign_time`      AS `sign_time`,
+        `abnormal_name`  AS `abnormal_name`,
+        `abnormal_code`  AS `abnormal_code`,
+        `abn_content`    AS `abn_content`
+        FROM `qfy_andon_call_driver` WHERE `del_flag` = '0')
+        UNION ALL
+        (SELECT `id`             AS `id`,
+        `call_type`      AS `call_type`,
+        `call_code`      AS `call_code`,
+        `call_state`     AS `call_state`,
+        `deviceno`       AS `deviceno`,
+        `dev_name`       AS `dev_name`,
+        `location`       AS `location`,
+        `rec_date`       AS `rec_date`,
+        `wc_code`        AS `wc_code`,
+        `wc_name`        AS `wc_name`,
+        `notifier`       AS `notifier`,
+        `notifier_name`  AS `notifier_name`,
+        `notifier_phone` AS `notifier_phone`,
+        `notice_depart`  AS `notice_depart`,
+        `fault_code`     AS `fault_code`,
+        `duty_man`       AS `duty_man`,
+        `duty_man_id`    AS `duty_man_id`,
+        `sys_org_code`   AS `sys_org_code`,
+        `del_flag`       AS `del_flag`,
+        `happen_pos`     AS `happen_pos`,
+        `sign_man`       AS `sign_man`,
+        `sign_man_id`    AS `sign_man_id`,
+        `sign_time`      AS `sign_time`,
+        `abnormal_name`  AS `abnormal_name`,
+        `abnormal_code`  AS `abnormal_code`,
+        `abn_content`    AS `abn_content`
+        FROM `qfy_andon_call_company` WHERE `del_flag` = '0')
+        UNION ALL
+        (SELECT `id`             AS `id`,
+        `call_type`      AS `call_type`,
+        `call_code`      AS `call_code`,
+        `call_state`     AS `call_state`,
+        `deviceno`       AS `deviceno`,
+        `dev_name`       AS `dev_name`,
+        `location`       AS `location`,
+        `rec_date`       AS `rec_date`,
+        `wc_code`        AS `wc_code`,
+        `wc_name`        AS `wc_name`,
+        `notifier`       AS `notifier`,
+        `notifier_name`  AS `notifier_name`,
+        `notifier_phone` AS `notifier_phone`,
+        `notice_depart`  AS `notice_depart`,
+        `fault_code`     AS `fault_code`,
+        `duty_man`       AS `duty_man`,
+        `duty_man_id`    AS `duty_man_id`,
+        `sys_org_code`   AS `sys_org_code`,
+        `del_flag`       AS `del_flag`,
+        `happen_pos`     AS `happen_pos`,
+        `sign_man`       AS `sign_man`,
+        `sign_man_id`    AS `sign_man_id`,
+        `sign_time`      AS `sign_time`,
+        `abnormal_name`  AS `abnormal_name`,
+        `abnormal_code`  AS `abnormal_code`,
+        `abn_content`    AS `abn_content`
+        FROM `qfy_andon_call_road` WHERE `del_flag` = '0')
+        ) t WHERE t.id = #{id}
+    </select>
+    <select id="selectCount" parameterType="com.qfy.modules.repair.entity.RepairMo" resultType="java.lang.Long">
+        SELECT count(*)
+        FROM qv_danger_all_v3 a
+        WHERE call_state = 0
+          AND wc_code LIKE concat(#{repairMo.wcCode}, '%')
+          AND (
+            exists(
+                    SELECT *,
+                        SUM(CASE WHEN (duty_man_id IS NULL OR duty_man_id = '') THEN 0 ELSE 1 END) AS total
+                          FROM qfy_andon_repair_mo
+                          WHERE catalog = '2'
+                            AND del_flag = '0'
+                            AND src_doc_code = a.call_code
+                        GROUP BY src_doc_code HAVING total = 0
+            ) OR
+            exists (
+                    SELECT *,
+                        SUM(CASE WHEN catalog = '1' THEN 0 ELSE 1 END) AS total
+                        FROM qfy_andon_repair_mo
+                            WHERE del_flag = 0
+                              AND src_doc_code = a.call_code
+                                GROUP BY src_doc_code HAVING total = 0
+                )
+            )
+    </select>
+</mapper>

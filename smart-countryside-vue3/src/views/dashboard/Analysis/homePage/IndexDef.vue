@@ -1,0 +1,32 @@
+<template>
+  <div class="p-4">
+    <GrowCard :EchartsObj="data" :loading="loading" class="enter-y" />
+    <SiteAnalysis :EchartsObj="data" class="!my-4 enter-y" :loading="loading" />
+    <div class="md:flex enter-y">
+      <VisitRadar :EchartsObj="data" class="md:w-1/3 w-full" :loading="loading" />
+      <VisitSource :EchartsObj="data" class="md:w-1/3 !md:mx-4 !md:my-0 !my-4 w-full" :loading="loading" />
+      <SalesProductPie :EchartsObj="data" class="md:w-1/3 w-full" :loading="loading" />
+    </div>
+  </div>
+</template>
+<script lang="ts" setup>
+  import { ref, onBeforeMount } from 'vue';
+  import GrowCard from '../components/GrowCard.vue';
+  import SiteAnalysis from '../components/SiteAnalysis.vue';
+  import VisitSource from '../components/VisitSource.vue';
+  import VisitRadar from '../components/VisitRadar.vue';
+  import SalesProductPie from '../components/SalesProductPie.vue';
+  import { getDessensionData } from '../api';
+
+  const loading = ref(true);
+  const data = ref({});
+
+  onBeforeMount(async () => {
+    const value  = await getDessensionData()
+    data.value = value.result
+  })
+
+  setTimeout(() => {
+    loading.value = false;
+  }, 500);
+</script>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.appauth.mapper.AppRolePermissionMapper">
+
+
+    <select id="querySelectedByRef" resultType="com.qfy.modules.appauth.entity.AppRolePermission">
+        select * from qfy_app_role_permission where role_id=#{roleId} and ref_data =#{refData}
+    </select>
+
+    <select id="selectAllRolePermission" resultMap="appRolePermission">
+        select a.id, a.permission_id,a.role_id,a.role_code,a.ref_data,b.perms,b.perms_type, b.name as permission_name
+        from qfy_app_role_permission a left join qfy_app_permission b on a.permission_id = b.id
+                                       left join qfy_app_role c on a.role_id = c.id
+        where (a.ref_data = #{refData} or a.ref_data = 0) and c.tenant_id = #{tenantId}
+    </select>
+
+    <resultMap id="appRolePermission" type="com.qfy.modules.appauth.model.AppRolePermissionVO" >
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="permission_id" property="permissionId" jdbcType="BIGINT"/>
+        <result column="permission_name" property="permissionName" jdbcType="VARCHAR"/>
+        <result column="perms_type" property="permsType" jdbcType="VARCHAR"/>
+        <result column="perms" property="perms" jdbcType="VARCHAR"/>
+        <result column="role_id" property="roleId" jdbcType="BIGINT"/>
+        <result column="role_code" property="roleCode" jdbcType="VARCHAR"/>
+        <result column="ref_data" property="refData" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+
+</mapper>

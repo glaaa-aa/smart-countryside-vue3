@@ -1,0 +1,477 @@
+.page {
+	min-height: 100vh;
+	/* background-color: #f8f8f8; */
+	background-color: #fff;
+	font-size: 16px;
+	font-family: PingFang-SC-Heavy, sans-serif;
+}
+
+uni-tabbar .uni-tabbar__label {
+	margin-top: 0 !important;
+}
+
+/*  */
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* 延期 */
+.yuqi {
+	/* color: #f90000; */
+	/* color: #fff;background-color: #ff4536;
+	padding: 0 6px;border-radius: 3px; */
+	color: #ff4536 !important;
+}
+
+.yuqis {
+	color: #ff4536 !important;
+}
+
+.underway {
+	color: #0fce00;
+}
+
+.no {
+	color: #929292;
+}
+
+.parentTask {
+	color: #1890ff !important;
+}
+
+/* 已完成 */
+.accomplish {
+	color: #929292 !important;
+}
+
+
+
+/* 搜索样式 */
+.search {
+	background-color: #f2f2f2;
+}
+
+.pagePadding {
+	padding: 10px;
+}
+
+.pagePadding15 {
+	padding: 15px;
+}
+
+/* 字体加粗 */
+.blod {
+	font-weight: 700;
+}
+
+.flexs {
+	display: flex;
+}
+
+.flexAlignCenter {
+	display: flex;
+	align-items: center;
+}
+
+.flexJustifyCenter {
+	display: flex;
+	justify-content: center;
+}
+
+.flexJustifyAround {
+	display: flex;
+	justify-content: space-around;
+}
+
+.flexJustifyEvenly {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.flexBetween {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flexJustifyAlignCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flexBetweenAlign {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flexEvenlyAlign {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.flexAroundAlign {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* 强制换行 */
+.lineFeed {
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+/* 必填星号 */
+.xin::before {
+	content: '*';
+	color: red;
+	/* display: flex;
+	align-items: center;
+	margin-right: 2px; */
+
+}
+
+/* 白色背景 */
+.backgroundColorWhite {
+	background-color: #fff;
+}
+
+/* 禁止的背景色 */
+.disabledColor {
+	background-color: #fff;
+}
+
+/* 宽度百分百 */
+.width100 {
+	width: 100%;
+}
+
+/* 高度百分百 */
+.height100 {
+	height: 100%;
+}
+
+/* 超出出现滚动条 */
+.overflowAuto {
+	overflow: auto;
+}
+
+/* 边框圆角50% */
+.borderRadius50 {
+	border-radius: 50%;
+}
+
+/* 字体居中 */
+.textCenter {
+	text-align: center;
+}
+
+/* 行内块 */
+.inlineBlock {
+	display: inline-block;
+}
+
+/* 超出强制不换行省略号 */
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 顶部固定定位 */
+.fixedTop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* 底部固定定位 */
+.fixedBottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* 左浮动 */
+.floatLeft {
+	float: left;
+}
+
+/* 右浮动 */
+.floatRight {
+	float: right;
+}
+
+/* 图标大小 */
+.iconSize {
+	font-size: 14px;
+}
+
+/* 内上边距10 */
+.paddingTop10 {
+	padding-top: 10px;
+}
+
+/* 内上边距44 */
+.paddingTop44 {
+	padding-top: 44px;
+}
+
+/* 内下边距10 */
+.paddingBottom10 {
+	padding-bottom: 10px;
+}
+
+/* 内左距10 */
+.paddingLeft10 {
+	padding-left: 10px;
+}
+
+/* 内右距10 */
+.paddingRight10 {
+	padding-right: 10px;
+}
+
+.bottomDistance {
+	margin-bottom: 10px;
+}
+
+.color {
+	color: #8e8e8e;
+}
+.fontWeight{
+	font-weight: bold;
+}
+/* 字体大小 */
+.fontSize12 {
+	font-size: 12px;
+}
+
+.fontSize13 {
+	font-size: 13px;
+}
+
+.fontSize14 {
+	font-size: 14px;
+}
+
+.fontSize15 {
+	font-size: 15px;
+}
+
+.fontSize16 {
+	font-size: 16px;
+}
+
+.fontSize17 {
+	font-size: 17px;
+}
+
+.fontSize18 {
+	font-size: 18px;
+}
+
+.fontSize20 {
+	font-size: 20px;
+}
+
+.fontSize26 {
+	font-size: 26px;
+}
+
+/* 毛玻璃特效 */
+.filter {
+	backdrop-filter: blur(5px);
+}
+
+/* 设置文本为大写 */
+.upper {
+	text-transform: uppercase;
+}
+
+/* 设置文本为小写 */
+.lower {
+	text-transform: lowercase;
+}
+
+/* 首字母下沉 */
+/* .text:first-letter {
+	font-size: 200%;
+	color: #000;
+} */
+/* 图片文字环绕 */
+.anyShape {
+	width: 300px;
+	float: left;
+	shape-outside: circle(50%);
+}
+
+/* 鼠标变成小手样式 */
+.pointer {
+	cursor: pointer;
+}
+
+
+
+/* 一级字体大小 */
+.one_fs {
+	font-size: 19px;
+}
+
+/* 二级字体大小 */
+.two_fs {
+	font-size: 16px !important;
+}
+
+/* 二级字体-列表 */
+.two_fs_list {
+	font-size: 18px !important;
+}
+
+/* 三级字体大小 */
+.three_fs {
+	font-size: 15px !important;
+}
+
+/* 积分排行-列表 */
+.jifen_fs {
+	font-size: 14px !important;
+}
+
+
+
+/* 列表右边文本颜色 */
+.itemTxt {
+	color: #9a9a9a;
+  }
+
+/* 全局表单样式 */
+/* 左边标题字号 */
+.u-form-item__body__left__content__label {
+	font-size: 18px !important;
+	/* font-weight: bold; */
+}
+
+/* 输入框placeholder字号 */
+.u-input__content__field-wrapper__field {
+	font-size: 17px !important;
+}
+/* 文本域placeholder字号 */
+.uni-textarea-placeholder {
+	font-size: 17px;
+}
+/* 文本域内容字号 */
+.u-textarea__field{
+    font-size: 17px !important;
+}
+/* 文本域内容字号 */
+.uni-textarea-textarea {
+    font-size: 17px;
+}
+/* form表单*号 */
+.u-form-item__body__left__content__required{
+    font-size: 15px !important;
+    font-weight: bold;
+	color: red !important;
+}
+/* cell */
+.u-cell__title-text{
+    font-size: 17px!important;
+    line-height: 22px;
+    color: #303133;
+}
+/* u-picker类型选择器字体 */
+.realName /deep/ .u-picker__view__column__item {
+  font-size: 18px;
+}
+
+/* form-item左边标题宽度 */
+.u-form-item__body__left {
+	width: 115px !important;
+}
+/* 最小宽度 */
+.mim-wthdh-itemTile {
+	display: inline-block;min-width: 180rpx;
+}
+
+/* form-item内边距 */
+.u-form-item__body {
+	padding: 15px 0 !important;
+}
+
+/* 步骤条标题样式 */
+.u-text__value--content {
+	font-size: 16px !important;
+}
+
+/* u-tabs字体 */
+.u-tabs__wrapper__nav__item__text {
+	font-size: 18px !important;
+}
+
+/* u-button按钮 */
+.u-button--normal {
+	font-size: 18px !important;
+}
+
+/* 步骤条时间样式 */
+.u-text__value--tips {
+	font-size: 15px !important;
+}
+
+/* uni.showModal弹窗样式 */
+uni-modal .uni-modal__bd {
+	font-size: 18px;
+}
+
+uni-modal .uni-modal__title {
+	font-size: 20px;
+	font-weight: bold;
+}
+/* 选择器按钮样式 */
+.u-toolbar__wrapper__cancel{
+    font-size: 18px !important;
+}
+.u-toolbar__wrapper__confirm{
+    font-size: 18px !important;
+}
+/* textarea文本域禁止时的背景 */
+.u-textarea--disabled {
+	background-color: #fff !important;
+}
+/* 首页 */
+.fs_info_two{
+	font-size: 17px !important;
+}
+.fs_info_three{
+	font-size: 15px !important;
+}
+.fs_info_four{
+	font-size: 15px !important;
+}
+/* 反诈宣传列表页 */
+.fz_two_fs_list {
+	font-size: 17px !important;
+}
+
+/* 反诈宣传列时间 */
+.fz_two_fs_time {
+	font-size: 16px !important;
+}
+/* 我的页面-信息样式 */
+.fz_my_message {
+	font-size: 18px !important;
+}
+
+/* 列表字体 */
+.list_fs{
+	font-size: 18px!important;
+}

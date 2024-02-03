@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qfy.modules.city3d.mapper.SysRoleMapperB" >
+  <resultMap id="BaseResultMap" type="com.qfy.modules.city3d.po.SysRole" >
+    <id column="role_id" property="roleId" jdbcType="VARCHAR" />
+    <result column="role_name" property="roleName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    role_id, role_name
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qfy.modules.city3d.po.SysRoleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from sys_role
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_role
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from sys_role
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.qfy.modules.city3d.po.SysRoleExample" >
+    delete from sys_role
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <!--<insert id="insert" parameterType="com.qfy.modules.city3d.po.SysRole" >
+    insert into sys_role (id, role_name, role_code,create_by,create_time)
+    values (#{roleId,jdbcType=VARCHAR},
+            #{roleName,jdbcType=VARCHAR},#{roleCode,jdbcType=VARCHAR},#{createBy,jdbcType=VARCHAR},now())
+  </insert>-->
+  <insert id="insertSelective" parameterType="com.qfy.modules.city3d.po.SysRole" >
+    insert into sys_role
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="roleName != null" >
+        role_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="roleName != null" >
+        #{roleName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.qfy.modules.city3d.po.SysRoleExample" resultType="java.lang.Integer" >
+    select count(*) from sys_role
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update sys_role
+    <set >
+      <if test="record.roleId != null" >
+        role_id = #{record.roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleName != null" >
+        role_name = #{record.roleName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update sys_role
+    set role_id = #{record.roleId,jdbcType=VARCHAR},
+      role_name = #{record.roleName,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qfy.modules.city3d.po.SysRole" >
+    update sys_role
+    <set >
+      <if test="roleName != null" >
+        role_name = #{roleName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{roleId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qfy.modules.city3d.po.SysRole" >
+    update sys_role
+    set role_name = #{roleName,jdbcType=VARCHAR}
+    where id = #{roleId,jdbcType=VARCHAR}
+  </update>
+
+  <resultMap id="BaseResultMap2" type="com.qfy.modules.city3d.po.SysRole" >
+    <id column="role_id" property="roleId" jdbcType="VARCHAR" />
+    <result column="role_name" property="roleName" jdbcType="VARCHAR" />
+    <collection property="sysRoleFunc" ofType="com.qfy.modules.city3d.po.SysRoleFunc">
+      <id column="role_func_id" property="roleFuncId" jdbcType="VARCHAR" />
+      <result column="func_id" property="funcId" jdbcType="VARCHAR" />
+      <result column="func_name" property="funcName" jdbcType="VARCHAR" />
+      <result column="role_id" property="roleId" jdbcType="VARCHAR" />
+      <result column="role_func_pid" property="roleFuncPid" jdbcType="VARCHAR" />
+      <result column="role_func_order" property="roleFuncOrder" jdbcType="INTEGER" />
+      <association property="sysFunc" javaType="com.qfy.modules.city3d.po.SysFunc">
+        <id column="func_id" property="funcId" jdbcType="VARCHAR" />
+        <result column="func_url" property="funcUrl" jdbcType="VARCHAR" />
+        <result column="func_iot_name" property="funcIotName" jdbcType="VARCHAR" />
+        <result column="func_iot_img" property="funcIotImg" jdbcType="VARCHAR" />
+        <result column="func_type" property="funcType" jdbcType="VARCHAR" />
+        <result column="func_src" property="funcSrc" jdbcType="VARCHAR" />
+        <result column="func_default_name" property="funcDefaultName" jdbcType="VARCHAR" />
+        <result column="func_pid" property="funcPid" jdbcType="VARCHAR" />
+        <result column="func_level" property="funcLevel" jdbcType="VARCHAR" />
+        <result column="func_icon" property="funcIcon" jdbcType="VARCHAR" />
+      </association>
+    </collection>
+    <collection property="sysRoleTiles3d" ofType="com.qfy.modules.city3d.po.SysRoleTiles3d">
+      <id column="role_tiles_id" property="roleTilesId" jdbcType="VARCHAR" />
+      <result column="role_id" property="roleId" jdbcType="VARCHAR" />
+      <result column="tiles_id" property="tilesId" jdbcType="VARCHAR" />
+      <association property="tiles3d" javaType="com.qfy.modules.city3d.po.Tiles3d">
+        <id column="tiles_id" property="tilesId" jdbcType="VARCHAR" />
+        <result column="tiles_name" property="tilesName" jdbcType="VARCHAR" />
+        <result column="tiles_url" property="tilesUrl" jdbcType="VARCHAR" />
+        <result column="tiles_type" property="tilesType" jdbcType="VARCHAR" />
+        <result column="tiles_x" property="tilesX" jdbcType="VARCHAR" />
+        <result column="tiles_y" property="tilesY" jdbcType="VARCHAR" />
+        <result column="tiles_z" property="tilesZ" jdbcType="VARCHAR" />
+        <result column="cam_poi" property="camPoi" jdbcType="VARCHAR" />
+        <result column="cam_heading" property="camHeading" jdbcType="VARCHAR" />
+        <result column="cam_pitch" property="camPitch" jdbcType="VARCHAR" />
+      </association>
+    </collection>
+    <collection property="sysRoleBim" ofType="com.qfy.modules.city3d.po.SysRoleBim">
+      <id column="role_bim_id" property="roleBimId" jdbcType="VARCHAR" />
+      <result column="role_id" property="roleId" jdbcType="VARCHAR" />
+      <result column="tiles_id" property="tilesId" jdbcType="VARCHAR" />
+      <association property="bim" javaType="com.qfy.modules.city3d.po.Bim">
+        <id column="tiles_id" property="tilesId" jdbcType="VARCHAR" />
+        <result column="tiles_name" property="tilesName" jdbcType="VARCHAR" />
+        <result column="tiles_url" property="tilesUrl" jdbcType="VARCHAR" />
+        <result column="tiles_type" property="tilesType" jdbcType="VARCHAR" />
+        <result column="tiles_x" property="tilesX" jdbcType="VARCHAR" />
+        <result column="tiles_y" property="tilesY" jdbcType="VARCHAR" />
+        <result column="tiles_z" property="tilesZ" jdbcType="VARCHAR" />
+        <result column="cam_poi" property="camPoi" jdbcType="VARCHAR" />
+        <result column="cam_heading" property="camHeading" jdbcType="VARCHAR" />
+        <result column="cam_pitch" property="camPitch" jdbcType="VARCHAR" />
+      </association>
+    </collection>
+  </resultMap>
+  <select id="getAllandFunc" resultMap="BaseResultMap2">
+    select r.*, s.* from sys_role r, sys_role_func s
+    where r.role_id = s.role_id
+  </select>
+  <select id="getAllandFuncById" resultMap="BaseResultMap2">
+    select r.*, s.*, f.* from sys_role r, sys_role_func s, sys_func f
+    where r.role_id = s.role_id and s.func_id = f.func_id
+      and r.role_id = #{roleId}
+  </select>
+  <select id="getAllandFuncByIdandSrc" resultMap="BaseResultMap2" parameterType="com.qfy.modules.city3d.po.SysRole">
+    select r.*, s.*, f.* from sys_role r, sys_role_func s, sys_func f
+    where r.role_id = s.role_id and s.func_id = f.func_id
+      and r.role_id = #{roleId} and f.func_src = #{roleName}
+    order by s.role_func_order
+  </select>
+  <select id="getAllandTiles3dById" resultMap="BaseResultMap2">
+    select r.*, s.*, t.* from sys_role r, sys_role_tiles3d s, tiles3d t
+    where r.role_id = s.role_id and s.tiles_id = t.tiles_id
+      and r.role_id = #{roleId}
+  </select>
+  <select id="getAllandBimById" resultMap="BaseResultMap2">
+    select r.*, s.*, b.* from sys_role r, sys_role_bim s, bim b
+    where r.role_id = s.role_id and s.tiles_id = b.tiles_id
+      and r.role_id = #{roleId}
+  </select>
+</mapper>

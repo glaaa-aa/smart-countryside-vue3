@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.family.mapper.FamilyTempMapper">
+
+    <update id="batchUpdateByUsername" parameterType="java.lang.String">
+        UPDATE qfy_family_base a,qfy_family_temp b
+            SET a.name = b.name,
+                a.telephone = b.telephone,
+                a.sex = b.sex,
+                a.s1 = b.s1,
+                a.s2 = b.s2,
+                a.org_code = b.org_code,
+                a.total_person = b.total_person,
+                a.atural_code = b.atural_code,
+                a.address = b.address,
+                a.house_number = b.house_number,
+                a.discern_date = b.discern_date,
+                a.eliminate_date = b.eliminate_date,
+                a.is_big_relocate = b.is_big_relocate,
+                a.family_type = b.family_type,
+                a.id_card = b.id_card,
+                a.is_eliminate = b.is_eliminate,
+                a.is_relocate = b.is_relocate,
+                a.monitor_type = b.monitor_type,
+                a.relocate_address = b.relocate_address,
+                a.relocate_date = b.relocate_date,
+                a.relocate_org_code = b.relocate_org_code,
+                a.tuopin_year = b.tuopin_year,
+                a.nation = b.nation,
+                a.update_time = now(),
+                a.update_by = #{username}
+        WHERE a.family_number = b.family_number
+            AND b.create_by = #{username}
+    </update>
+
+</mapper>

@@ -1,0 +1,27 @@
+html,body {
+    height: 0;
+}
+.page {
+    padding: 10px;
+    height: calc(100vh - 44px);
+    /* padding-bottom: 52px; */
+    margin-top: 44px;
+
+    /* background-color: #f2f2f2; */
+}
+
+.bottomDistance {
+    margin-bottom: 10px;
+}
+
+.color {
+    color: #8e8e8e;
+}
+
+.size {
+    font-size: 14px;
+}
+
+.bold {
+    font-weight: 700;
+}

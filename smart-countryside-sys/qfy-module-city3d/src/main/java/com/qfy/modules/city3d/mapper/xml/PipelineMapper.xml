@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qfy.modules.city3d.mapper.PipelineMapper" >
+  <resultMap id="BaseResultMap" type="com.qfy.modules.city3d.po.Pipeline" >
+    <id column="pipe_id" property="pipeId" jdbcType="VARCHAR" />
+    <result column="pl_name" property="plName" jdbcType="VARCHAR" />
+    <result column="pl_line" property="plLine" jdbcType="VARCHAR" />
+    <result column="pl_out_diameter" property="plOutDiameter" jdbcType="VARCHAR" />
+    <result column="pl_in_diameter" property="plInDiameter" jdbcType="VARCHAR" />
+    <result column="pl_deep" property="plDeep" jdbcType="VARCHAR" />
+    <result column="pl_material" property="plMaterial" jdbcType="VARCHAR" />
+    <result column="pl_type" property="plType" jdbcType="VARCHAR" />
+    <result column="pl_slope" property="plSlope" jdbcType="VARCHAR" />
+    <result column="pl_roughness" property="plRoughness" jdbcType="VARCHAR" />
+    <result column="pl_direction" property="plDirection" jdbcType="VARCHAR" />
+    <result column="pl_pos" property="plPos" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    pipe_id, pl_name, pl_line, pl_out_diameter, pl_in_diameter, pl_deep, pl_material,
+    pl_type, pl_slope, pl_roughness, pl_direction, pl_pos
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qfy.modules.city3d.po.PipelineExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from pipeline
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from pipeline
+    where pipe_id = #{pipeId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from pipeline
+    where pipe_id = #{pipeId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.qfy.modules.city3d.po.PipelineExample" >
+    delete from pipeline
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.qfy.modules.city3d.po.Pipeline" >
+    insert into pipeline (pipe_id, pl_name, pl_line,
+      pl_out_diameter, pl_in_diameter, pl_deep,
+      pl_material, pl_type, pl_slope,
+      pl_roughness, pl_direction, pl_pos
+      )
+    values (#{pipeId,jdbcType=VARCHAR}, #{plName,jdbcType=VARCHAR}, #{plLine,jdbcType=VARCHAR},
+      #{plOutDiameter,jdbcType=VARCHAR}, #{plInDiameter,jdbcType=VARCHAR}, #{plDeep,jdbcType=VARCHAR},
+      #{plMaterial,jdbcType=VARCHAR}, #{plType,jdbcType=VARCHAR}, #{plSlope,jdbcType=VARCHAR},
+      #{plRoughness,jdbcType=VARCHAR}, #{plDirection,jdbcType=VARCHAR}, #{plPos,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.qfy.modules.city3d.po.Pipeline" >
+    insert into pipeline
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pipeId != null" >
+        pipe_id,
+      </if>
+      <if test="plName != null" >
+        pl_name,
+      </if>
+      <if test="plLine != null" >
+        pl_line,
+      </if>
+      <if test="plOutDiameter != null" >
+        pl_out_diameter,
+      </if>
+      <if test="plInDiameter != null" >
+        pl_in_diameter,
+      </if>
+      <if test="plDeep != null" >
+        pl_deep,
+      </if>
+      <if test="plMaterial != null" >
+        pl_material,
+      </if>
+      <if test="plType != null" >
+        pl_type,
+      </if>
+      <if test="plSlope != null" >
+        pl_slope,
+      </if>
+      <if test="plRoughness != null" >
+        pl_roughness,
+      </if>
+      <if test="plDirection != null" >
+        pl_direction,
+      </if>
+      <if test="plPos != null" >
+        pl_pos,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pipeId != null" >
+        #{pipeId,jdbcType=VARCHAR},
+      </if>
+      <if test="plName != null" >
+        #{plName,jdbcType=VARCHAR},
+      </if>
+      <if test="plLine != null" >
+        #{plLine,jdbcType=VARCHAR},
+      </if>
+      <if test="plOutDiameter != null" >
+        #{plOutDiameter,jdbcType=VARCHAR},
+      </if>
+      <if test="plInDiameter != null" >
+        #{plInDiameter,jdbcType=VARCHAR},
+      </if>
+      <if test="plDeep != null" >
+        #{plDeep,jdbcType=VARCHAR},
+      </if>
+      <if test="plMaterial != null" >
+        #{plMaterial,jdbcType=VARCHAR},
+      </if>
+      <if test="plType != null" >
+        #{plType,jdbcType=VARCHAR},
+      </if>
+      <if test="plSlope != null" >
+        #{plSlope,jdbcType=VARCHAR},
+      </if>
+      <if test="plRoughness != null" >
+        #{plRoughness,jdbcType=VARCHAR},
+      </if>
+      <if test="plDirection != null" >
+        #{plDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="plPos != null" >
+        #{plPos,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.qfy.modules.city3d.po.PipelineExample" resultType="java.lang.Integer" >
+    select count(*) from pipeline
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update pipeline
+    <set >
+      <if test="record.pipeId != null" >
+        pipe_id = #{record.pipeId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plName != null" >
+        pl_name = #{record.plName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plLine != null" >
+        pl_line = #{record.plLine,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plOutDiameter != null" >
+        pl_out_diameter = #{record.plOutDiameter,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plInDiameter != null" >
+        pl_in_diameter = #{record.plInDiameter,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plDeep != null" >
+        pl_deep = #{record.plDeep,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plMaterial != null" >
+        pl_material = #{record.plMaterial,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plType != null" >
+        pl_type = #{record.plType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plSlope != null" >
+        pl_slope = #{record.plSlope,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plRoughness != null" >
+        pl_roughness = #{record.plRoughness,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plDirection != null" >
+        pl_direction = #{record.plDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plPos != null" >
+        pl_pos = #{record.plPos,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update pipeline
+    set pipe_id = #{record.pipeId,jdbcType=VARCHAR},
+      pl_name = #{record.plName,jdbcType=VARCHAR},
+      pl_line = #{record.plLine,jdbcType=VARCHAR},
+      pl_out_diameter = #{record.plOutDiameter,jdbcType=VARCHAR},
+      pl_in_diameter = #{record.plInDiameter,jdbcType=VARCHAR},
+      pl_deep = #{record.plDeep,jdbcType=VARCHAR},
+      pl_material = #{record.plMaterial,jdbcType=VARCHAR},
+      pl_type = #{record.plType,jdbcType=VARCHAR},
+      pl_slope = #{record.plSlope,jdbcType=VARCHAR},
+      pl_roughness = #{record.plRoughness,jdbcType=VARCHAR},
+      pl_direction = #{record.plDirection,jdbcType=VARCHAR},
+      pl_pos = #{record.plPos,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qfy.modules.city3d.po.Pipeline" >
+    update pipeline
+    <set >
+      <if test="plName != null" >
+        pl_name = #{plName,jdbcType=VARCHAR},
+      </if>
+      <if test="plLine != null" >
+        pl_line = #{plLine,jdbcType=VARCHAR},
+      </if>
+      <if test="plOutDiameter != null" >
+        pl_out_diameter = #{plOutDiameter,jdbcType=VARCHAR},
+      </if>
+      <if test="plInDiameter != null" >
+        pl_in_diameter = #{plInDiameter,jdbcType=VARCHAR},
+      </if>
+      <if test="plDeep != null" >
+        pl_deep = #{plDeep,jdbcType=VARCHAR},
+      </if>
+      <if test="plMaterial != null" >
+        pl_material = #{plMaterial,jdbcType=VARCHAR},
+      </if>
+      <if test="plType != null" >
+        pl_type = #{plType,jdbcType=VARCHAR},
+      </if>
+      <if test="plSlope != null" >
+        pl_slope = #{plSlope,jdbcType=VARCHAR},
+      </if>
+      <if test="plRoughness != null" >
+        pl_roughness = #{plRoughness,jdbcType=VARCHAR},
+      </if>
+      <if test="plDirection != null" >
+        pl_direction = #{plDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="plPos != null" >
+        pl_pos = #{plPos,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pipe_id = #{pipeId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qfy.modules.city3d.po.Pipeline" >
+    update pipeline
+    set pl_name = #{plName,jdbcType=VARCHAR},
+      pl_line = #{plLine,jdbcType=VARCHAR},
+      pl_out_diameter = #{plOutDiameter,jdbcType=VARCHAR},
+      pl_in_diameter = #{plInDiameter,jdbcType=VARCHAR},
+      pl_deep = #{plDeep,jdbcType=VARCHAR},
+      pl_material = #{plMaterial,jdbcType=VARCHAR},
+      pl_type = #{plType,jdbcType=VARCHAR},
+      pl_slope = #{plSlope,jdbcType=VARCHAR},
+      pl_roughness = #{plRoughness,jdbcType=VARCHAR},
+      pl_direction = #{plDirection,jdbcType=VARCHAR},
+      pl_pos = #{plPos,jdbcType=VARCHAR}
+    where pipe_id = #{pipeId,jdbcType=VARCHAR}
+  </update>
+</mapper>

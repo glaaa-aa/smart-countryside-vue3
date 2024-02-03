@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.hr.info.mapper.HrPersonMapper">
+
+    <select id="selectByIds" parameterType="java.lang.String" resultType="com.qfy.modules.hr.info.entity.HrPerson">
+        SELECT *
+        FROM  qfy_hr_person
+        WHERE
+            find_in_set(id,#{ids})
+    </select>
+
+    <select id="selectByAtteRoster" parameterType="java.lang.String" resultType="com.qfy.modules.hr.info.entity.HrPerson">
+        SELECT *
+        FROM  qfy_hr_person
+        WHERE zaizhi !=2 and id in
+              (select empid from hr_atte_roster where month= #{mperiod})
+    </select>
+
+    <select id="selectByAtteGroupId" parameterType="java.lang.String" resultType="com.qfy.modules.hr.info.entity.HrPerson">
+        SELECT *
+        FROM  qfy_hr_person
+        WHERE id in
+              (select member_id from hr_atte_group_member where atte_group_id= #{atteGroupId})
+    </select>
+
+    <select id="selectByCardNo" parameterType="java.lang.String" resultType="com.qfy.modules.hr.info.entity.HrPerson">
+        SELECT *
+        FROM  qfy_hr_person
+        WHERE card_no= #{cardno}
+    </select>
+
+    <select id="selectByPersonNo" resultType="com.qfy.modules.hr.info.entity.HrPerson">
+        SELECT *
+        FROM  qfy_hr_person
+        WHERE person_no= #{personNo}
+    </select>
+
+</mapper>

@@ -1,0 +1,2378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Feb 03 11:07:19 CST 2024</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:19,775</td>
+<td class="Message">HV000001: Hibernate Validator 6.2.5.Final</td>
+<td class="MethodOfCaller">&lt;clinit&gt;</td>
+<td class="FileOfCaller">Version.java</td>
+<td class="LineOfCaller">21</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:19,792</td>
+<td class="Message">Starting JeecgSystemApplication using Java 1.8.0_161 on DESKTOP-6EVUJN0 with PID 5300 (D:\projects\qfy-smart-countryside-v3\smart-countryside-sys\jeecg-module-system\jeecg-system-start\target\classes started by xFc in D:\projects\qfy-smart-countryside-v3\smart-countryside-sys)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">55</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:19,793</td>
+<td class="Message">The following 1 profile is active: &quot;dev&quot;</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">637</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,237</td>
+<td class="Message">Multiple Spring Data modules found, entering strict repository configuration mode</td>
+<td class="MethodOfCaller">multipleStoresDetected</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">262</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,239</td>
+<td class="Message">Bootstrapping Spring Data Redis repositories in DEFAULT mode.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">132</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,329</td>
+<td class="Message">Finished Spring Data repository scanning in 75 ms. Found 0 Redis repository interfaces.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">201</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,451</td>
+<td class="Message"> ******************* init miniDao config [ begin ] *********************** </td>
+<td class="MethodOfCaller">miniDaoBeanScannerConfigurer</td>
+<td class="FileOfCaller">MinidaoAutoConfiguration.java</td>
+<td class="LineOfCaller">23</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,451</td>
+<td class="Message"> ------ minidao.base-package ------- org.jeecg.modules.jmreport.*,org.jeecg.modules.drag.*</td>
+<td class="MethodOfCaller">miniDaoBeanScannerConfigurer</td>
+<td class="FileOfCaller">MinidaoAutoConfiguration.java</td>
+<td class="LineOfCaller">25</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,452</td>
+<td class="Message"> *******************  init miniDao config  [ end ] *********************** </td>
+<td class="MethodOfCaller">miniDaoBeanScannerConfigurer</td>
+<td class="FileOfCaller">MinidaoAutoConfiguration.java</td>
+<td class="LineOfCaller">42</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,499</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysMessageMapper&#39; and &#39;org.jeecg.modules.message.mapper.SysMessageMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysMessageTemplateMapper&#39; and &#39;org.jeecg.modules.message.mapper.SysMessageTemplateMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;ossFileMapper&#39; and &#39;org.jeecg.modules.oss.mapper.OssFileMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;quartzJobMapper&#39; and &#39;org.jeecg.modules.quartz.mapper.QuartzJobMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysAnnouncementMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysAnnouncementMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysAnnouncementSendMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysAnnouncementSendMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysCategoryMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysCategoryMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysCheckRuleMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysCheckRuleMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysCommentMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysCommentMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,500</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDataLogMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDataLogMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDataSourceMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDataSourceMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDepartMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDepartMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDepartPermissionMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDepartPermissionMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDepartRoleMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDepartRoleMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDepartRolePermissionMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDepartRolePermissionMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDepartRoleUserMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDepartRoleUserMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDictItemMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDictItemMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysDictMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysDictMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysFilesMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysFilesMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,501</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysFillRuleMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysFillRuleMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysFormFileMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysFormFileMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysGatewayRouteMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysGatewayRouteMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysLogMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysLogMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysPackPermissionMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysPackPermissionMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysPermissionDataRuleMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysPermissionDataRuleMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysPermissionMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysPermissionMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysPositionMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysPositionMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysRoleIndexMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysRoleIndexMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysRoleMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysRoleMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysRolePermissionMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysRolePermissionMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,502</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysTableWhiteListMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysTableWhiteListMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysTenantMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysTenantMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysTenantPackMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysTenantPackMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysTenantPackUserMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysTenantPackUserMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysThirdAccountMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysThirdAccountMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysUserAgentMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysUserAgentMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysUserDepartMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysUserDepartMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysUserMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysUserMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysUserPositionMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysUserPositionMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysUserRoleMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysUserRoleMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;sysUserTenantMapper&#39; and &#39;org.jeecg.modules.system.mapper.SysUserTenantMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlAuthDataMapper&#39; and &#39;org.jeecg.modules.online.auth.mapper.OnlAuthDataMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,503</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlAuthPageMapper&#39; and &#39;org.jeecg.modules.online.auth.mapper.OnlAuthPageMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlAuthRelationMapper&#39; and &#39;org.jeecg.modules.online.auth.mapper.OnlAuthRelationMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgformButtonMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlCgformButtonMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgformEnhanceJavaMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlCgformEnhanceJavaMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgformEnhanceJsMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlCgformEnhanceJsMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgformEnhanceSqlMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlCgformEnhanceSqlMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgformFieldMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlCgformFieldMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgformHeadMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlCgformHeadMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgformIndexMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlCgformIndexMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlineMapper&#39; and &#39;org.jeecg.modules.online.cgform.mapper.OnlineMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgreportHeadMapper&#39; and &#39;org.jeecg.modules.online.cgreport.mapper.OnlCgreportHeadMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgreportItemMapper&#39; and &#39;org.jeecg.modules.online.cgreport.mapper.OnlCgreportItemMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,504</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;onlCgreportParamMapper&#39; and &#39;org.jeecg.modules.online.cgreport.mapper.OnlCgreportParamMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,505</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;jeecgDemoMapper&#39; and &#39;org.jeecg.modules.demo.test.mapper.JeecgDemoMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,505</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;jeecgOrderCustomerMapper&#39; and &#39;org.jeecg.modules.demo.test.mapper.JeecgOrderCustomerMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,505</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;jeecgOrderMainMapper&#39; and &#39;org.jeecg.modules.demo.test.mapper.JeecgOrderMainMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,505</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;jeecgOrderTicketMapper&#39; and &#39;org.jeecg.modules.demo.test.mapper.JeecgOrderTicketMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,505</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;joaDemoMapper&#39; and &#39;org.jeecg.modules.demo.test.mapper.JoaDemoMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:22,505</td>
+<td class="Message">Skipping MapperFactoryBean with name &#39;baseCommonMapper&#39; and &#39;org.jeecg.modules.base.mapper.BaseCommonMapper&#39; mapperInterface. Bean already defined with the same name!</td>
+<td class="MethodOfCaller">warn</td>
+<td class="FileOfCaller">Logger.java</td>
+<td class="LineOfCaller">44</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,644</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,644</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDataSourceDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbFieldDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbParamDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDictDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDictItemDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportLinkDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportMapDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportShareDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.drag.dao.OnlDragCompDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetHeadDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetItemDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetParamDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,645</td>
+<td class="Message">register minidao name is { org.jeecg.modules.drag.dao.OnlDragDataSourceDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,646</td>
+<td class="Message">register minidao name is { org.jeecg.modules.drag.dao.OnlDragPageCompDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,646</td>
+<td class="Message">register minidao name is { org.jeecg.modules.drag.dao.OnlDragPageDao }</td>
+<td class="MethodOfCaller">doScan</td>
+<td class="FileOfCaller">MiniDaoClassPathMapperScanner.java</td>
+<td class="LineOfCaller">48</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,903</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#16&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,907</td>
+<td class="Message">Bean &#39;onlDragPageDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,908</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#15&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,909</td>
+<td class="Message">Bean &#39;onlDragPageCompDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,910</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#14&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,910</td>
+<td class="Message">Bean &#39;onlDragDataSourceDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,911</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#13&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,912</td>
+<td class="Message">Bean &#39;onlDragDatasetParamDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,912</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#12&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,913</td>
+<td class="Message">Bean &#39;onlDragDatasetItemDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,914</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#11&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,914</td>
+<td class="Message">Bean &#39;onlDragDatasetHeadDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,915</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#10&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,915</td>
+<td class="Message">Bean &#39;onlDragCompDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,916</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#9&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,917</td>
+<td class="Message">Bean &#39;jimuReportShareDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,917</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#8&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,918</td>
+<td class="Message">Bean &#39;jimuReportMapDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,918</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#7&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,919</td>
+<td class="Message">Bean &#39;jimuReportLinkDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,919</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#6&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,920</td>
+<td class="Message">Bean &#39;jimuReportDictItemDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,920</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#5&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,921</td>
+<td class="Message">Bean &#39;jimuReportDictDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,921</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#4&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,922</td>
+<td class="Message">Bean &#39;jimuReportDbParamDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,922</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#3&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,923</td>
+<td class="Message">Bean &#39;jimuReportDbFieldDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,923</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#2&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,924</td>
+<td class="Message">Bean &#39;jimuReportDbDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,925</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f#1&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,925</td>
+<td class="Message">Bean &#39;jimuReportDataSourceDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,926</td>
+<td class="Message">Bean &#39;(inner bean)#73385d3f&#39; of type [org.jeecgframework.minidao.aop.MiniDaoHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,926</td>
+<td class="Message">Bean &#39;jimuReportDao&#39; of type [org.jeecgframework.minidao.factory.MiniDaoBeanFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,939</td>
+<td class="Message">Bean &#39;spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties&#39; of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,942</td>
+<td class="Message">Bean &#39;org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration&#39; of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,953</td>
+<td class="Message">Bean &#39;org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration&#39; of type [org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,954</td>
+<td class="Message">Bean &#39;org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration&#39; of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,957</td>
+<td class="Message">Bean &#39;management.metrics.export.prometheus-org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties&#39; of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,960</td>
+<td class="Message">Bean &#39;prometheusConfig&#39; of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusPropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,961</td>
+<td class="Message">Bean &#39;collectorRegistry&#39; of type [io.prometheus.client.CollectorRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,962</td>
+<td class="Message">Bean &#39;org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration&#39; of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,963</td>
+<td class="Message">Bean &#39;micrometerClock&#39; of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,981</td>
+<td class="Message">Bean &#39;prometheusMeterRegistry&#39; of type [io.micrometer.prometheus.PrometheusMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,984</td>
+<td class="Message">Bean &#39;micrometerOptions&#39; of type [io.lettuce.core.metrics.MicrometerOptions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:22,985</td>
+<td class="Message">Bean &#39;lettuceMetrics&#39; of type [org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration$$Lambda$446/304504964] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,044</td>
+<td class="Message">Bean &#39;lettuceClientResources&#39; of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,098</td>
+<td class="Message">Bean &#39;redisConnectionFactory&#39; of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,103</td>
+<td class="Message">Bean &#39;jeecgBaseConfig&#39; of type [org.jeecg.config.JeecgBaseConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,105</td>
+<td class="Message">Bean &#39;shiroConfig&#39; of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$ad46c514] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,326</td>
+<td class="Message">Bean &#39;spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,331</td>
+<td class="Message">Bean &#39;com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAopConfiguration&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAopConfiguration$$EnhancerBySpringCGLIB$$cf7c346f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,341</td>
+<td class="Message">Bean &#39;dsProcessor&#39; of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,377</td>
+<td class="Message">Bean &#39;shiroRealm&#39; of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,508</td>
+<td class="Message">===============(1)创建缓存管理器RedisCacheManager</td>
+<td class="MethodOfCaller">redisCacheManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">244</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,509</td>
+<td class="Message">===============(2)创建RedisManager,连接Redis..</td>
+<td class="MethodOfCaller">redisManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">262</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,510</td>
+<td class="Message">Bean &#39;redisManager&#39; of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,516</td>
+<td class="Message">Bean &#39;securityManager&#39; of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,534</td>
+<td class="Message">Bean &#39;authorizationAttributeSourceAdvisor&#39; of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,551</td>
+<td class="Message">Bean &#39;org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration&#39; of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$61235acb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,554</td>
+<td class="Message">Bean &#39;eventBus&#39; of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">376</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,823</td>
+<td class="Message">Tomcat initialized with port(s): 8080 (http)</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">TomcatWebServer.java</td>
+<td class="LineOfCaller">108</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,832</td>
+<td class="Message">Initializing ProtocolHandler [&quot;http-nio-8080&quot;]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,833</td>
+<td class="Message">Starting service [Tomcat]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,833</td>
+<td class="Message">Starting Servlet engine: [Apache Tomcat/9.0.73]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,955</td>
+<td class="Message">Initializing Spring embedded WebApplicationContext</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:23,955</td>
+<td class="Message">Root WebApplicationContext: initialization completed in 4077 ms</td>
+<td class="MethodOfCaller">prepareWebApplicationContext</td>
+<td class="FileOfCaller">ServletWebServerApplicationContext.java</td>
+<td class="LineOfCaller">292</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:24,231</td>
+<td class="Message"> Init JimuReport Config [ Token Interceptor &amp; Resource Locations ] </td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">JimuReportConfiguration.java</td>
+<td class="LineOfCaller">90</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:24,821</td>
+<td class="Message">{dataSource-1,master} inited</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">1010</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:25,241</td>
+<td class="Message">{dataSource-2,postgresql} inited</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">1010</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:25,241</td>
+<td class="Message">dynamic-datasource - add a datasource named [postgresql] success</td>
+<td class="MethodOfCaller">addDataSource</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">154</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:25,241</td>
+<td class="Message">dynamic-datasource - add a datasource named [master] success</td>
+<td class="MethodOfCaller">addDataSource</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">154</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:25,242</td>
+<td class="Message">dynamic-datasource initial loaded [2] datasource,primary datasource named [master]</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">237</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2024-02-03 11:07:26,320</td>
+<td class="Message">mapper[com.qfy.modules.commons.mapper.SystemUserMapper.selectAllTenntUser] is ignored, because it exists, maybe from xml file</td>
+<td class="MethodOfCaller">addMappedStatement</td>
+<td class="FileOfCaller">MybatisConfiguration.java</td>
+<td class="LineOfCaller">110</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:26,978</td>
+<td class="Message">class com.qfy.modules.api.domain.FamilyRoster ,Not found @TableId annotation, Cannot use Mybatis-Plus &#39;xxById&#39; Method.</td>
+<td class="MethodOfCaller">getMethodList</td>
+<td class="FileOfCaller">DefaultSqlInjector.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:07:26,990</td>
+<td class="Message">class com.qfy.modules.api.domain.PointsRanking ,Not found @TableId annotation, Cannot use Mybatis-Plus &#39;xxById&#39; Method.</td>
+<td class="MethodOfCaller">getMethodList</td>
+<td class="FileOfCaller">DefaultSqlInjector.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:28,207</td>
+<td class="Message"> --- redis config init --- </td>
+<td class="MethodOfCaller">redisTemplate</td>
+<td class="FileOfCaller">RedisConfig.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,455</td>
+<td class="Message">Using default implementation for ThreadExecutor</td>
+<td class="MethodOfCaller">instantiate</td>
+<td class="FileOfCaller">StdSchedulerFactory.java</td>
+<td class="LineOfCaller">1220</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,456</td>
+<td class="Message">Job execution threads will use class loader of thread: main</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">SimpleThreadPool.java</td>
+<td class="LineOfCaller">268</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,463</td>
+<td class="Message">Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">SchedulerSignalerImpl.java</td>
+<td class="LineOfCaller">61</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,463</td>
+<td class="Message">Quartz Scheduler v.2.3.2 created.</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">QuartzScheduler.java</td>
+<td class="LineOfCaller">229</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,465</td>
+<td class="Message">Using db table-based data access locking (synchronization).</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">JobStoreSupport.java</td>
+<td class="LineOfCaller">672</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,467</td>
+<td class="Message">JobStoreCMT initialized.</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">JobStoreCMT.java</td>
+<td class="LineOfCaller">145</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,467</td>
+<td class="Message">Scheduler meta-data: Quartz Scheduler (v2.3.2) &#39;MyScheduler&#39; with instanceId &#39;DESKTOP-6EVUJN01706929649456&#39;
+  Scheduler class: &#39;org.quartz.core.QuartzScheduler&#39; - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool &#39;org.quartz.simpl.SimpleThreadPool&#39; - with 10 threads.
+  Using job-store &#39;org.springframework.scheduling.quartz.LocalDataSourceJobStore&#39; - which supports persistence. and is clustered.
+</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">QuartzScheduler.java</td>
+<td class="LineOfCaller">294</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,467</td>
+<td class="Message">Quartz scheduler &#39;MyScheduler&#39; initialized from an externally provided properties instance.</td>
+<td class="MethodOfCaller">instantiate</td>
+<td class="FileOfCaller">StdSchedulerFactory.java</td>
+<td class="LineOfCaller">1374</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,468</td>
+<td class="Message">Quartz scheduler version: 2.3.2</td>
+<td class="MethodOfCaller">instantiate</td>
+<td class="FileOfCaller">StdSchedulerFactory.java</td>
+<td class="LineOfCaller">1378</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:29,468</td>
+<td class="Message">JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@58267ba1</td>
+<td class="MethodOfCaller">setJobFactory</td>
+<td class="FileOfCaller">QuartzScheduler.java</td>
+<td class="LineOfCaller">2293</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:31,145</td>
+<td class="Message"> Init JimuReport Config [ 线程池 ] </td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">JmReportExecutorConfig.java</td>
+<td class="LineOfCaller">42</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:31,855</td>
+<td class="Message">结束初始化用户分管部门和负责部门==&gt;用时120毫秒</td>
+<td class="MethodOfCaller">initData</td>
+<td class="FileOfCaller">UserDepartFactory.java</td>
+<td class="LineOfCaller">84</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:32,097</td>
+<td class="Message">初始化系统全局变量====&gt;SystemConstant</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">SystemConstant.java</td>
+<td class="LineOfCaller">37</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:32,567</td>
+<td class="Message">初始化第三方参数配置 ==============&gt;thirdConfig&lt;==============</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">ThirdConfigFactory.java</td>
+<td class="LineOfCaller">49</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:38,936</td>
+<td class="Message">Exposing 2 endpoint(s) beneath base path &#39;/actuator&#39;</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">EndpointLinksResolver.java</td>
+<td class="LineOfCaller">58</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:39,072</td>
+<td class="Message"> Init CodeGenerate Config [ Get Db Config From application.yml ] </td>
+<td class="MethodOfCaller">initCodeGenerateDbConfig</td>
+<td class="FileOfCaller">CodeGenerateDbConfig.java</td>
+<td class="LineOfCaller">46</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:40,066</td>
+<td class="Message">Starting ProtocolHandler [&quot;http-nio-8080&quot;]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:40,084</td>
+<td class="Message">Tomcat started on port(s): 8080 (http) with context path &#39;/qfy-boot-system&#39;</td>
+<td class="MethodOfCaller">start</td>
+<td class="FileOfCaller">TomcatWebServer.java</td>
+<td class="LineOfCaller">220</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:43,507</td>
+<td class="Message">Will start Quartz Scheduler [MyScheduler] in 1 seconds</td>
+<td class="MethodOfCaller">startScheduler</td>
+<td class="FileOfCaller">SchedulerFactoryBean.java</td>
+<td class="LineOfCaller">734</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:43,520</td>
+<td class="Message">Started JeecgSystemApplication in 24.281 seconds (JVM running for 25.05)</td>
+<td class="MethodOfCaller">logStarted</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">61</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:43,525</td>
+<td class="Message"> Init Code Generate Template [ 检测如果是JAR启动环境，Copy模板到config目录 ] </td>
+<td class="MethodOfCaller">onApplicationEvent</td>
+<td class="FileOfCaller">CodeTemplateInitListener.java</td>
+<td class="LineOfCaller">29</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:43,540</td>
+<td class="Message">
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/qfy-boot-system/
+	External: 	http://192.168.0.111:8080/qfy-boot-system/
+	Swagger文档: 	http://192.168.0.111:8080/qfy-boot-system/doc.html
+----------------------------------------------------------</td>
+<td class="MethodOfCaller">main</td>
+<td class="FileOfCaller">JeecgSystemApplication.java</td>
+<td class="LineOfCaller">41</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:44,512</td>
+<td class="Message">Starting Quartz Scheduler now, after delay of 1 seconds</td>
+<td class="MethodOfCaller">run</td>
+<td class="FileOfCaller">SchedulerFactoryBean.java</td>
+<td class="LineOfCaller">750</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:44,545</td>
+<td class="Message">Scheduler MyScheduler_$_DESKTOP-6EVUJN01706929649456 started.</td>
+<td class="MethodOfCaller">start</td>
+<td class="FileOfCaller">QuartzScheduler.java</td>
+<td class="LineOfCaller">547</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:56,642</td>
+<td class="Message">A cookie header was received [Hm_lvt_098e6e84ab585bf0c2e6853604192b8b=1699323566,1700011180,1700012097,1700033261;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:56,651</td>
+<td class="Message">Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:56,651</td>
+<td class="Message">Initializing Servlet &#39;dispatcherServlet&#39;</td>
+<td class="MethodOfCaller">initServletBean</td>
+<td class="FileOfCaller">FrameworkServlet.java</td>
+<td class="LineOfCaller">525</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:07:56,654</td>
+<td class="Message">Completed initialization in 3 ms</td>
+<td class="MethodOfCaller">initServletBean</td>
+<td class="FileOfCaller">FrameworkServlet.java</td>
+<td class="LineOfCaller">547</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:09:58,200</td>
+<td class="Message">获取验证码，Redis key = 8bb4aa1d63f5a8d1fac9c3052d0fb7c2，checkCode = ivxa</td>
+<td class="MethodOfCaller">randomImage</td>
+<td class="FileOfCaller">LoginController.java</td>
+<td class="LineOfCaller">527</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:10:05,025</td>
+<td class="Message"> 登录接口用户的租户ID = 0</td>
+<td class="MethodOfCaller">setLoginTenant</td>
+<td class="FileOfCaller">SysUserServiceImpl.java</td>
+<td class="LineOfCaller">934</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:10:05,214</td>
+<td class="Message">加密操作，Aspect程序耗时：7ms</td>
+<td class="MethodOfCaller">around</td>
+<td class="FileOfCaller">SensitiveDataAspect.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:22:17,840</td>
+<td class="Message">检测到实体里没有字段createTime，改成采用ID排序！</td>
+<td class="MethodOfCaller">doMultiFieldsOrder</td>
+<td class="FileOfCaller">QueryGenerator.java</td>
+<td class="LineOfCaller">245</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,902</td>
+<td class="Message">Sign Interceptor request URI = /qfy-boot-system/sys/dict/loadTreeData</td>
+<td class="MethodOfCaller">preHandle</td>
+<td class="FileOfCaller">SignAuthInterceptor.java</td>
+<td class="LineOfCaller">36</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,908</td>
+<td class="Message">Sign Interceptor request URI = /qfy-boot-system/sys/dict/loadTreeData</td>
+<td class="MethodOfCaller">preHandle</td>
+<td class="FileOfCaller">SignAuthInterceptor.java</td>
+<td class="LineOfCaller">36</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,908</td>
+<td class="Message">Param paramsJsonStr : {&quot;code&quot;:&quot;id&quot;,&quot;condition&quot;:&quot;&quot;,&quot;converIsLeafVal&quot;:&quot;1&quot;,&quot;hasChildField&quot;:&quot;has_child&quot;,&quot;pid&quot;:&quot;0&quot;,&quot;pidField&quot;:&quot;pid&quot;,&quot;tableName&quot;:&quot;qfy_app_page_element&quot;,&quot;text&quot;:&quot;title&quot;}</td>
+<td class="MethodOfCaller">getParamsSign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,909</td>
+<td class="Message">Param paramsJsonStr : {&quot;code&quot;:&quot;id&quot;,&quot;condition&quot;:&quot;&quot;,&quot;converIsLeafVal&quot;:&quot;1&quot;,&quot;hasChildField&quot;:&quot;has_child&quot;,&quot;pid&quot;:&quot;0&quot;,&quot;pidField&quot;:&quot;pid&quot;,&quot;tableName&quot;:&quot;qfy_app_page_element&quot;,&quot;text&quot;:&quot;title&quot;}</td>
+<td class="MethodOfCaller">getParamsSign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,910</td>
+<td class="Message">Param Sign : 2D62CD3006638F48061CE44C5A56DA1A</td>
+<td class="MethodOfCaller">verifySign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">37</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,910</td>
+<td class="Message">Param Sign : 2D62CD3006638F48061CE44C5A56DA1A</td>
+<td class="MethodOfCaller">verifySign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">37</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,912</td>
+<td class="Message">字典拼接的查询SQL：select title,id from qfy_app_page_element</td>
+<td class="MethodOfCaller">isPassByDict</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">127</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,912</td>
+<td class="Message">字典拼接的查询SQL：select title,id from qfy_app_page_element</td>
+<td class="MethodOfCaller">isPassByDict</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">127</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,950</td>
+<td class="Message">获取select sql信息 ：{qfy_app_page_element=SelectSqlInfo{fromTableName=&#39;qfy_app_page_element&#39;, fromSubSelect=null, aliasName=&#39;null&#39;, selectFields=[id, title], realSelectFields=[id, title], selectAll=false}} </td>
+<td class="MethodOfCaller">isPassBySql</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,950</td>
+<td class="Message">获取select sql信息 ：{qfy_app_page_element=SelectSqlInfo{fromTableName=&#39;qfy_app_page_element&#39;, fromSubSelect=null, aliasName=&#39;null&#39;, selectFields=[id, title], realSelectFields=[id, title], selectAll=false}} </td>
+<td class="MethodOfCaller">isPassBySql</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,966</td>
+<td class="Message">表字典白名单初始化完成：{sys_permission=id,name, sys_position=name,id, qfy_system_dict=item_text,item_name,item_value, onl_drag_comp=id,comp_name, qfy_check_item=name,id, qfy_family_member=name,id_card,id, qfy_check_template=name,id, sys_dict=dict_code, oa_officialdoc_organcode=id,organ_name, sys_fill_rule=rule_code, demo=id,name, qfy_cooperative_enterprises=name,id, design_form=id,desform_name,desform_code, qfy_cms_section=name_code,name,id, qfy_sys_organization=code,pcode,name,id, sys_depart=id,org_code,depart_name, sys_user=phone,id&quot;,id,email,realname,username, onl_cgreport_head=code, yn=name,id, qfy_family_base=family_number, sys_category=id,name, onl_cgform_head=table_txt,table_name, oa_wps_file=id,name, qfy_app_page_element=pid,id,title}</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,967</td>
+<td class="Message">checkWhiteList tableName: qfy_app_page_element</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">156</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,967</td>
+<td class="Message">白名单校验：查询表&quot;qfy_app_page_element&quot;，查询字段 [id, title] 通过校验</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">195</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,968</td>
+<td class="Message">  获取sql信息 ：[QueryTable{name=&#39;qfy_app_page_element&#39;, alias=&#39;&#39;, fields=[id, title], all=false}] </td>
+<td class="MethodOfCaller">isPass</td>
+<td class="FileOfCaller">AbstractQueryBlackListHandler.java</td>
+<td class="LineOfCaller">64</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,968</td>
+<td class="Message">表字典白名单初始化完成：{sys_permission=id,name, sys_position=name,id, qfy_system_dict=item_text,item_name,item_value, onl_drag_comp=id,comp_name, qfy_check_item=name,id, qfy_family_member=name,id_card,id, qfy_check_template=name,id, sys_dict=dict_code, oa_officialdoc_organcode=id,organ_name, sys_fill_rule=rule_code, demo=id,name, qfy_cooperative_enterprises=name,id, design_form=id,desform_name,desform_code, qfy_cms_section=name_code,name,id, qfy_sys_organization=code,pcode,name,id, sys_depart=id,org_code,depart_name, sys_user=phone,id&quot;,id,email,realname,username, onl_cgreport_head=code, yn=name,id, qfy_family_base=family_number, sys_category=id,name, onl_cgform_head=table_txt,table_name, oa_wps_file=id,name, qfy_app_page_element=pid,id,title}</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,969</td>
+<td class="Message">checkWhiteList tableName: qfy_app_page_element</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">156</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,969</td>
+<td class="Message">白名单校验：查询表&quot;qfy_app_page_element&quot;，查询字段 [id, title] 通过校验</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">195</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:22:24,969</td>
+<td class="Message">  获取sql信息 ：[QueryTable{name=&#39;qfy_app_page_element&#39;, alias=&#39;&#39;, fields=[id, title], all=false}] </td>
+<td class="MethodOfCaller">isPass</td>
+<td class="FileOfCaller">AbstractQueryBlackListHandler.java</td>
+<td class="LineOfCaller">64</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:08,508</td>
+<td class="Message">字典拼接的查询SQL：select realname,username from sys_user</td>
+<td class="MethodOfCaller">isPassByDict</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">127</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:08,509</td>
+<td class="Message">获取select sql信息 ：{sys_user=SelectSqlInfo{fromTableName=&#39;sys_user&#39;, fromSubSelect=null, aliasName=&#39;null&#39;, selectFields=[realname, username], realSelectFields=[realname, username], selectAll=false}} </td>
+<td class="MethodOfCaller">isPassBySql</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:08,513</td>
+<td class="Message">表字典白名单初始化完成：{sys_permission=id,name, sys_position=name,id, qfy_system_dict=item_text,item_name,item_value, onl_drag_comp=id,comp_name, qfy_check_item=name,id, qfy_family_member=name,id_card,id, qfy_check_template=name,id, sys_dict=dict_code, oa_officialdoc_organcode=id,organ_name, sys_fill_rule=rule_code, demo=id,name, qfy_cooperative_enterprises=name,id, design_form=id,desform_name,desform_code, qfy_cms_section=name_code,name,id, qfy_sys_organization=code,pcode,name,id, sys_depart=id,org_code,depart_name, sys_user=phone,id&quot;,id,email,realname,username, onl_cgreport_head=code, yn=name,id, qfy_family_base=family_number, sys_category=id,name, onl_cgform_head=table_txt,table_name, oa_wps_file=id,name, qfy_app_page_element=pid,id,title}</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:08,514</td>
+<td class="Message">checkWhiteList tableName: sys_user</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">156</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:08,514</td>
+<td class="Message">白名单校验：查询表&quot;sys_user&quot;，查询字段 [realname, username] 通过校验</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">195</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:08,514</td>
+<td class="Message">  获取sql信息 ：[QueryTable{name=&#39;sys_user&#39;, alias=&#39;&#39;, fields=[realname, username], all=false}] </td>
+<td class="MethodOfCaller">isPass</td>
+<td class="FileOfCaller">AbstractQueryBlackListHandler.java</td>
+<td class="LineOfCaller">64</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,410</td>
+<td class="Message">Sign Interceptor request URI = /qfy-boot-system/sys/dict/loadTreeData</td>
+<td class="MethodOfCaller">preHandle</td>
+<td class="FileOfCaller">SignAuthInterceptor.java</td>
+<td class="LineOfCaller">36</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,410</td>
+<td class="Message">Param paramsJsonStr : {&quot;code&quot;:&quot;id&quot;,&quot;condition&quot;:&quot;&quot;,&quot;converIsLeafVal&quot;:&quot;1&quot;,&quot;hasChildField&quot;:&quot;has_child&quot;,&quot;pid&quot;:&quot;0&quot;,&quot;pidField&quot;:&quot;pid&quot;,&quot;tableName&quot;:&quot;qfy_cms_section&quot;,&quot;text&quot;:&quot;name&quot;}</td>
+<td class="MethodOfCaller">getParamsSign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,410</td>
+<td class="Message">Param Sign : 779FB8B7E9FDDE53923F293CEC29AB8D</td>
+<td class="MethodOfCaller">verifySign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">37</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,410</td>
+<td class="Message">Sign Interceptor request URI = /qfy-boot-system/sys/dict/loadTreeData</td>
+<td class="MethodOfCaller">preHandle</td>
+<td class="FileOfCaller">SignAuthInterceptor.java</td>
+<td class="LineOfCaller">36</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,411</td>
+<td class="Message">Param paramsJsonStr : {&quot;code&quot;:&quot;id&quot;,&quot;condition&quot;:&quot;&quot;,&quot;converIsLeafVal&quot;:&quot;1&quot;,&quot;hasChildField&quot;:&quot;has_child&quot;,&quot;pid&quot;:&quot;0&quot;,&quot;pidField&quot;:&quot;pid&quot;,&quot;tableName&quot;:&quot;qfy_cms_section&quot;,&quot;text&quot;:&quot;name&quot;}</td>
+<td class="MethodOfCaller">getParamsSign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,411</td>
+<td class="Message">Param Sign : 779FB8B7E9FDDE53923F293CEC29AB8D</td>
+<td class="MethodOfCaller">verifySign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">37</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,411</td>
+<td class="Message">字典拼接的查询SQL：select name,id from qfy_cms_section</td>
+<td class="MethodOfCaller">isPassByDict</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">127</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,411</td>
+<td class="Message">字典拼接的查询SQL：select name,id from qfy_cms_section</td>
+<td class="MethodOfCaller">isPassByDict</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">127</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,411</td>
+<td class="Message">获取select sql信息 ：{qfy_cms_section=SelectSqlInfo{fromTableName=&#39;qfy_cms_section&#39;, fromSubSelect=null, aliasName=&#39;null&#39;, selectFields=[name, id], realSelectFields=[name, id], selectAll=false}} </td>
+<td class="MethodOfCaller">isPassBySql</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,412</td>
+<td class="Message">获取select sql信息 ：{qfy_cms_section=SelectSqlInfo{fromTableName=&#39;qfy_cms_section&#39;, fromSubSelect=null, aliasName=&#39;null&#39;, selectFields=[name, id], realSelectFields=[name, id], selectAll=false}} </td>
+<td class="MethodOfCaller">isPassBySql</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">表字典白名单初始化完成：{sys_permission=id,name, sys_position=name,id, qfy_system_dict=item_text,item_name,item_value, onl_drag_comp=id,comp_name, qfy_check_item=name,id, qfy_family_member=name,id_card,id, qfy_check_template=name,id, sys_dict=dict_code, oa_officialdoc_organcode=id,organ_name, sys_fill_rule=rule_code, demo=id,name, qfy_cooperative_enterprises=name,id, design_form=id,desform_name,desform_code, qfy_cms_section=name_code,name,id, qfy_sys_organization=code,pcode,name,id, sys_depart=id,org_code,depart_name, sys_user=phone,id&quot;,id,email,realname,username, onl_cgreport_head=code, yn=name,id, qfy_family_base=family_number, sys_category=id,name, onl_cgform_head=table_txt,table_name, oa_wps_file=id,name, qfy_app_page_element=pid,id,title}</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">checkWhiteList tableName: qfy_cms_section</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">156</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">表字典白名单初始化完成：{sys_permission=id,name, sys_position=name,id, qfy_system_dict=item_text,item_name,item_value, onl_drag_comp=id,comp_name, qfy_check_item=name,id, qfy_family_member=name,id_card,id, qfy_check_template=name,id, sys_dict=dict_code, oa_officialdoc_organcode=id,organ_name, sys_fill_rule=rule_code, demo=id,name, qfy_cooperative_enterprises=name,id, design_form=id,desform_name,desform_code, qfy_cms_section=name_code,name,id, qfy_sys_organization=code,pcode,name,id, sys_depart=id,org_code,depart_name, sys_user=phone,id&quot;,id,email,realname,username, onl_cgreport_head=code, yn=name,id, qfy_family_base=family_number, sys_category=id,name, onl_cgform_head=table_txt,table_name, oa_wps_file=id,name, qfy_app_page_element=pid,id,title}</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">白名单校验：查询表&quot;qfy_cms_section&quot;，查询字段 [name, id] 通过校验</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">195</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">checkWhiteList tableName: qfy_cms_section</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">156</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">  获取sql信息 ：[QueryTable{name=&#39;qfy_cms_section&#39;, alias=&#39;&#39;, fields=[name, id], all=false}] </td>
+<td class="MethodOfCaller">isPass</td>
+<td class="FileOfCaller">AbstractQueryBlackListHandler.java</td>
+<td class="LineOfCaller">64</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">白名单校验：查询表&quot;qfy_cms_section&quot;，查询字段 [name, id] 通过校验</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">195</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:09,414</td>
+<td class="Message">  获取sql信息 ：[QueryTable{name=&#39;qfy_cms_section&#39;, alias=&#39;&#39;, fields=[name, id], all=false}] </td>
+<td class="MethodOfCaller">isPass</td>
+<td class="FileOfCaller">AbstractQueryBlackListHandler.java</td>
+<td class="LineOfCaller">64</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:23:20,842</td>
+<td class="Message">检测到实体里没有字段createTime，改成采用ID排序！</td>
+<td class="MethodOfCaller">doMultiFieldsOrder</td>
+<td class="FileOfCaller">QueryGenerator.java</td>
+<td class="LineOfCaller">245</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,531</td>
+<td class="Message">Sign Interceptor request URI = /qfy-boot-system/sys/dict/loadTreeData</td>
+<td class="MethodOfCaller">preHandle</td>
+<td class="FileOfCaller">SignAuthInterceptor.java</td>
+<td class="LineOfCaller">36</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,531</td>
+<td class="Message">Param paramsJsonStr : {&quot;code&quot;:&quot;id&quot;,&quot;condition&quot;:&quot;&quot;,&quot;converIsLeafVal&quot;:&quot;1&quot;,&quot;hasChildField&quot;:&quot;has_child&quot;,&quot;pid&quot;:&quot;0&quot;,&quot;pidField&quot;:&quot;pid&quot;,&quot;tableName&quot;:&quot;qfy_app_page_element&quot;,&quot;text&quot;:&quot;title&quot;}</td>
+<td class="MethodOfCaller">getParamsSign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,532</td>
+<td class="Message">Param Sign : 2D62CD3006638F48061CE44C5A56DA1A</td>
+<td class="MethodOfCaller">verifySign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">37</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,532</td>
+<td class="Message">字典拼接的查询SQL：select title,id from qfy_app_page_element</td>
+<td class="MethodOfCaller">isPassByDict</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">127</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,533</td>
+<td class="Message">获取select sql信息 ：{qfy_app_page_element=SelectSqlInfo{fromTableName=&#39;qfy_app_page_element&#39;, fromSubSelect=null, aliasName=&#39;null&#39;, selectFields=[id, title], realSelectFields=[id, title], selectAll=false}} </td>
+<td class="MethodOfCaller">isPassBySql</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,536</td>
+<td class="Message">表字典白名单初始化完成：{sys_permission=id,name, sys_position=name,id, qfy_system_dict=item_text,item_name,item_value, onl_drag_comp=id,comp_name, qfy_check_item=name,id, qfy_family_member=name,id_card,id, qfy_check_template=name,id, sys_dict=dict_code, oa_officialdoc_organcode=id,organ_name, sys_fill_rule=rule_code, demo=id,name, qfy_cooperative_enterprises=name,id, design_form=id,desform_name,desform_code, qfy_cms_section=name_code,name,id, qfy_sys_organization=code,pcode,name,id, sys_depart=id,org_code,depart_name, sys_user=phone,id&quot;,id,email,realname,username, onl_cgreport_head=code, yn=name,id, qfy_family_base=family_number, sys_category=id,name, onl_cgform_head=table_txt,table_name, oa_wps_file=id,name, qfy_app_page_element=pid,id,title}</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,536</td>
+<td class="Message">Sign Interceptor request URI = /qfy-boot-system/sys/dict/loadTreeData</td>
+<td class="MethodOfCaller">preHandle</td>
+<td class="FileOfCaller">SignAuthInterceptor.java</td>
+<td class="LineOfCaller">36</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,536</td>
+<td class="Message">checkWhiteList tableName: qfy_app_page_element</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">156</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,536</td>
+<td class="Message">白名单校验：查询表&quot;qfy_app_page_element&quot;，查询字段 [id, title] 通过校验</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">195</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,536</td>
+<td class="Message">Param paramsJsonStr : {&quot;code&quot;:&quot;id&quot;,&quot;condition&quot;:&quot;&quot;,&quot;converIsLeafVal&quot;:&quot;1&quot;,&quot;hasChildField&quot;:&quot;has_child&quot;,&quot;pid&quot;:&quot;0&quot;,&quot;pidField&quot;:&quot;pid&quot;,&quot;tableName&quot;:&quot;qfy_app_page_element&quot;,&quot;text&quot;:&quot;title&quot;}</td>
+<td class="MethodOfCaller">getParamsSign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,537</td>
+<td class="Message">Param Sign : 2D62CD3006638F48061CE44C5A56DA1A</td>
+<td class="MethodOfCaller">verifySign</td>
+<td class="FileOfCaller">SignUtil.java</td>
+<td class="LineOfCaller">37</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,537</td>
+<td class="Message">  获取sql信息 ：[QueryTable{name=&#39;qfy_app_page_element&#39;, alias=&#39;&#39;, fields=[id, title], all=false}] </td>
+<td class="MethodOfCaller">isPass</td>
+<td class="FileOfCaller">AbstractQueryBlackListHandler.java</td>
+<td class="LineOfCaller">64</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,537</td>
+<td class="Message">字典拼接的查询SQL：select title,id from qfy_app_page_element</td>
+<td class="MethodOfCaller">isPassByDict</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">127</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,538</td>
+<td class="Message">获取select sql信息 ：{qfy_app_page_element=SelectSqlInfo{fromTableName=&#39;qfy_app_page_element&#39;, fromSubSelect=null, aliasName=&#39;null&#39;, selectFields=[id, title], realSelectFields=[id, title], selectAll=false}} </td>
+<td class="MethodOfCaller">isPassBySql</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">76</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,541</td>
+<td class="Message">表字典白名单初始化完成：{sys_permission=id,name, sys_position=name,id, qfy_system_dict=item_text,item_name,item_value, onl_drag_comp=id,comp_name, qfy_check_item=name,id, qfy_family_member=name,id_card,id, qfy_check_template=name,id, sys_dict=dict_code, oa_officialdoc_organcode=id,organ_name, sys_fill_rule=rule_code, demo=id,name, qfy_cooperative_enterprises=name,id, design_form=id,desform_name,desform_code, qfy_cms_section=name_code,name,id, qfy_sys_organization=code,pcode,name,id, sys_depart=id,org_code,depart_name, sys_user=phone,id&quot;,id,email,realname,username, onl_cgreport_head=code, yn=name,id, qfy_family_base=family_number, sys_category=id,name, onl_cgform_head=table_txt,table_name, oa_wps_file=id,name, qfy_app_page_element=pid,id,title}</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,541</td>
+<td class="Message">checkWhiteList tableName: qfy_app_page_element</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">156</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,541</td>
+<td class="Message">白名单校验：查询表&quot;qfy_app_page_element&quot;，查询字段 [id, title] 通过校验</td>
+<td class="MethodOfCaller">checkWhiteList</td>
+<td class="FileOfCaller">DictTableWhiteListHandlerImpl.java</td>
+<td class="LineOfCaller">195</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 11:23:21,542</td>
+<td class="Message">  获取sql信息 ：[QueryTable{name=&#39;qfy_app_page_element&#39;, alias=&#39;&#39;, fields=[id, title], all=false}] </td>
+<td class="MethodOfCaller">isPass</td>
+<td class="FileOfCaller">AbstractQueryBlackListHandler.java</td>
+<td class="LineOfCaller">64</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2024-02-03 11:29:07,755</td>
+<td class="Message">检测到实体里没有字段createTime，改成采用ID排序！</td>
+<td class="MethodOfCaller">doMultiFieldsOrder</td>
+<td class="FileOfCaller">QueryGenerator.java</td>
+<td class="LineOfCaller">245</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2024-02-03 14:16:20,742</td>
+<td class="Message">---AutoPoi--Get_DB_Dict------[否_0, 是_1]</td>
+<td class="MethodOfCaller">queryDict</td>
+<td class="FileOfCaller">AutoPoiDictConfig.java</td>
+<td class="LineOfCaller">76</td>
+</tr>

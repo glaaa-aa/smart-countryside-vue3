@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.dissension.mapper.DissensionRecordsMapper">
+
+    <select id="selectByCode" resultType="com.qfy.modules.dissension.entity.DissensionRecords">
+        SELECT *
+        FROM  qfy_dissension_records
+        WHERE
+            tension_code = #{mainId}
+    </select>
+</mapper>

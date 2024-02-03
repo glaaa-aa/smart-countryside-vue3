@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/smart-countryside-sys/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/smart-countryside-sys/jeecg-boot-base-core/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-api/jeecg-system-local-api/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-api/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-biz/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/jeecg-system-start/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/jeecg-module-system/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/qfy-module-city3d/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/qfy-module-cms/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/qfy-module-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/qfy-module-dissension/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/qfy-module-family/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/qfy-module-smartform/pom.xml" />
+        <option value="$PROJECT_DIR$/smart-countryside-sys/qfy-module-third/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

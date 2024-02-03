@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.files.mapper.FileFolderMapper">
+
+    <select id="getUniqueByRef" parameterType="Object" resultType="com.qfy.modules.files.entity.FileFolder">
+        SELECT *
+        FROM  oss_file_folder
+        WHERE pid = #{pid} and ref_code = #{refCode} and ref_type =  #{refType}
+    </select>
+
+    <delete id="deleteByRef" parameterType="Object">
+        DELETE
+        FROM  oss_file_folder
+        WHERE
+            ref_code =  #{refCode} and ref_type =  #{refType}
+    </delete>
+
+</mapper>

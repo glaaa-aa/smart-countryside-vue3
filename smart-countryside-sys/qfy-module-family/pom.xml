@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>qfy-module-family</artifactId>
+    <version>1.0</version>
+
+    <parent>
+        <artifactId>jeecg-boot-parent</artifactId>
+        <groupId>org.jeecgframework.boot</groupId>
+        <version>3.6.1</version>
+    </parent>
+
+    <!--引入的模块-->
+    <dependencies>
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>jeecg-boot-base-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>qfy-module-commons</artifactId>
+            <version>2.0.2209</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>jeecg-system-local-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>qfy-module-city3d</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jeecgframework.boot</groupId>
+            <artifactId>qfy-module-smartform</artifactId>
+            <version>24.0.1</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

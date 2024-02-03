@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.commons.mapper.CmnDictMapper">
+
+    <select id="dictByRef" resultType="com.qfy.modules.commons.entity.CmnDict">
+        select * from qfy_system_dict where ref_src=#{refSrc} and status=1 and (ref_data = #{refData} or ref_data =0 ) order by sort_order,id
+    </select>
+
+    <select id="getDictByrefAndCode"  parameterType="com.qfy.modules.commons.entity.CmnDict" resultType="com.qfy.modules.commons.entity.CmnDict">
+        select * from qfy_system_dict where item_value =#{cmnDict.itemValue} and ref_src=#{cmnDict.refSrc} and status=1
+        and (ref_data = #{cmnDict.refData} or ref_data =0 ) order by sort_order,id
+    </select>
+
+    <select id="countDictByRef"  parameterType="com.qfy.modules.commons.entity.CmnDict"  resultType="long" >
+        select count(1) from qfy_system_dict where item_value =#{cmnDict.itemValue}
+       and ref_src=#{cmnDict.refSrc} and status=1
+       and (ref_data = #{cmnDict.refData} or ref_data =0 ) order by sort_order,id
+    </select>
+
+    <select id="countDictByUpdateRef"  parameterType="com.qfy.modules.commons.entity.CmnDict"  resultType="long" >
+        select count(1) from qfy_system_dict where item_value =#{cmnDict.itemValue}
+                                               and ref_src=#{cmnDict.refSrc} and status=1 and id != #{cmnDict.id}
+                                               and (ref_data = #{cmnDict.refData} or ref_data =0 ) order by sort_order,id
+    </select>
+
+</mapper>

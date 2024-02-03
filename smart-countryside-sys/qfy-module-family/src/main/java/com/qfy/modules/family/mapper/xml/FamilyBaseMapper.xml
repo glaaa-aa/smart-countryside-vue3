@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfy.modules.family.mapper.FamilyBaseMapper">
+
+    <select id="queryFamilyBase" parameterType="com.qfy.modules.family.entity.FamilyBase" resultMap="familyPageList">
+       select * from qv_family_base where 1=1
+    </select>
+
+    <resultMap id="familyPageList"  type="com.qfy.modules.family.model.FamilyBasePage" >
+        <result column="year" property="year" jdbcType="VARCHAR"/>
+        <result column="id" property="familyBase.id" jdbcType="VARCHAR"/>
+        <result column="create_by" property="familyBase.createBy" jdbcType="VARCHAR"/>
+        <result column="update_by" property="familyBase.updateBy" jdbcType="VARCHAR"/>
+        <result column="create_time" property="familyBase.createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="familyBase.updateTime" jdbcType="TIMESTAMP"/>
+        <result column="sys_org_code" property="familyBase.sysOrgCode" jdbcType="VARCHAR"/>
+        <result column="remarks" property="familyBase.remarks" jdbcType="VARCHAR"/>
+        <result column="tenant_id" property="familyBase.tenantId" jdbcType="INTEGER"/>
+        <result column="org_code" property="familyBase.orgCode" jdbcType="VARCHAR"/>
+        <result column="org_name" property="familyBase.orgName" jdbcType="VARCHAR"/>
+        <result column="atural_code" property="familyBase.aturalCode" jdbcType="VARCHAR"/>
+        <result column="atural_name" property="familyBase.aturalName" jdbcType="VARCHAR"/>
+        <result column="house_number" property="familyBase.houseNumber" jdbcType="VARCHAR"/>
+        <result column="family_number" property="familyBase.familyNumber" jdbcType="VARCHAR"/>
+        <result column="name" property="familyBase.name" jdbcType="VARCHAR"/>
+        <result column="sex" property="familyBase.sex" jdbcType="VARCHAR"/>
+        <result column="id_card" property="familyBase.idCard" jdbcType="VARCHAR"/>
+        <result column="nation" property="familyBase.nation" jdbcType="VARCHAR"/>
+        <result column="total_person" property="familyBase.totalPerson" jdbcType="INTEGER"/>
+        <result column="total_worker" property="familyBase.totalWorker" jdbcType="INTEGER"/>
+        <result column="total_in_school" property="familyBase.totalInSchool" jdbcType="INTEGER"/>
+        <result column="telephone" property="familyBase.telephone" jdbcType="VARCHAR"/>
+        <result column="address" property="familyBase.address" jdbcType="VARCHAR"/>
+        <result column="is_relocate" property="familyBase.isRelocate" jdbcType="VARCHAR"/>
+        <result column="is_big_relocate" property="familyBase.isBigRelocate" jdbcType="VARCHAR"/>
+        <result column="relocate_org_name" property="familyBase.relocateOrgName" jdbcType="VARCHAR"/>
+        <result column="relocate_org_code" property="familyBase.relocateOrgCode" jdbcType="VARCHAR"/>
+        <result column="relocate_address" property="familyBase.relocateAddress" jdbcType="VARCHAR"/>
+        <result column="relocate_date" property="familyBase.relocateDate" jdbcType="VARCHAR"/>
+        <result column="family_type" property="familyBase.familyType" jdbcType="VARCHAR"/>
+        <result column="tuopin_year" property="familyBase.tuopinYear" jdbcType="VARCHAR"/>
+        <result column="monitor_type" property="familyBase.monitorType" jdbcType="VARCHAR"/>
+        <result column="discern_date" property="familyBase.discernDate" jdbcType="VARCHAR"/>
+        <result column="is_eliminate" property="familyBase.isEliminate" jdbcType="VARCHAR"/>
+        <result column="eliminate_date" property="familyBase.eliminateDate" jdbcType="VARCHAR"/>
+        <result column="lat" property="familyBase.lat" jdbcType="VARCHAR"/>
+        <result column="lon" property="familyBase.lon" jdbcType="VARCHAR"/>
+        <result column="is_water_safe" property="familyWater.isWaterSafe" jdbcType="INTEGER"/>
+        <result column="water_source" property="familyWater.waterSource" jdbcType="VARCHAR"/>
+        <result column="is_subsidy" property="familyWater.isSubsidy" jdbcType="INTEGER"/>
+        <result column="subsidy_date" property="familyWater.subsidyDate" jdbcType="VARCHAR"/>
+        <result column="subsidy_amount" property="familyWater.subsidyAmount" jdbcType="VARCHAR"/>
+        <result column="water_id" property="familyWater.id" jdbcType="VARCHAR"/>
+        <result column="water_create_by" property="familyWater.createBy" jdbcType="VARCHAR"/>
+        <result column="water_update_by" property="familyWater.updateBy" jdbcType="VARCHAR"/>
+        <result column="water_create_time" property="familyWater.createTime" jdbcType="TIMESTAMP"/>
+        <result column="water_update_time" property="familyWater.updateTime" jdbcType="TIMESTAMP"/>
+        <result column="zf_area" property="familyHouse.zfArea" jdbcType="VARCHAR"/>
+        <result column="zf_floor" property="familyHouse.zfFloor" jdbcType="VARCHAR"/>
+        <result column="zf_level" property="familyHouse.zfLevel" jdbcType="VARCHAR"/>
+        <result column="is_reform" property="familyHouse.isReform" jdbcType="INTEGER"/>
+        <result column="reform_date" property="familyHouse.reformDate" jdbcType="VARCHAR"/>
+        <result column="reform_amount" property="familyHouse.reformAmount" jdbcType="VARCHAR"/>
+        <result column="house_id" property="familyHouse.id" jdbcType="VARCHAR"/>
+        <result column="house_create_by" property="familyHouse.createBy" jdbcType="VARCHAR"/>
+        <result column="house_update_by" property="familyHouse.updateBy" jdbcType="VARCHAR"/>
+        <result column="house_create_time" property="familyHouse.createTime" jdbcType="TIMESTAMP"/>
+        <result column="house_update_time" property="familyHouse.updateTime" jdbcType="TIMESTAMP"/>
+        <result column="gengd_area" property="familyProduction.gengdArea" jdbcType="DOUBLE"/>
+        <result column="lind_area" property="familyProduction.lindArea" jdbcType="DOUBLE"/>
+        <result column="total_pig" property="familyProduction.totalPig" jdbcType="DOUBLE"/>
+        <result column="total_cattle" property="familyProduction.totalCattle" jdbcType="INTEGER"/>
+        <result column="total_sheep" property="familyProduction.totalSheep" jdbcType="INTEGER"/>
+        <result column="total_chicken" property="familyProduction.totalChicken" jdbcType="INTEGER"/>
+        <result column="total_other" property="familyProduction.totalOther" jdbcType="INTEGER"/>
+        <result column="pro_id" property="familyProduction.id" jdbcType="VARCHAR"/>
+        <result column="pro_create_by" property="familyProduction.createBy" jdbcType="VARCHAR"/>
+        <result column="pro_update_by" property="familyProduction.updateBy" jdbcType="VARCHAR"/>
+        <result column="pro_create_time" property="familyProduction.createTime" jdbcType="TIMESTAMP"/>
+        <result column="pro_update_time" property="familyProduction.updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+        <select id="selectIndexChartStatics" resultType="com.qfy.modules.family.entity.VillageRanking">
+                SELECT SUM(total_person)                                  AS total_population,
+                       COUNT(id)                                          AS total_households,
+                       SUM(CASE WHEN family_type = '2' THEN 1 ELSE 0 END) AS total_poverty,
+                       SUM(is_relocate)                                   AS total_relocate
+                FROM qfy_family_base WHERE del_flag = 0
+        </select>
+
+        <select id="selectIndexVillageRanking" resultType="com.qfy.modules.family.entity.VillageRanking">
+                SELECT SUM(total_person)                                  AS total_population,
+                       COUNT(id)                                          AS total_households,
+                       org_code
+                FROM qfy_family_base WHERE del_flag = 0 GROUP BY org_code ORDER BY total_population DESC
+        </select>
+</mapper>
